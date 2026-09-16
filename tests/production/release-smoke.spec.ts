@@ -10,14 +10,17 @@ test('production release supports chapter entry, answering, recovery and mistake
     await page.locator('.filter-panel').evaluate(element=>{(element as HTMLDetailsElement).open=true;});
     await page.getByRole('button',{name:`第 ${chapter} 章`}).click();
     await page.getByRole('button',{name:/按章节复习/}).click();
+    if(chapter>1) await page.getByRole('button',{name:'结束旧轮并开始'}).click();
     await expect(page.locator('.question-card .meta')).toContainText(`第 ${chapter} 章`);
     await expect(page.locator('.question-card')).not.toContainText(/scut811-p1-|family_id|needs_manual_check|reviewed|KEY_EXERCISE|SIGN_ERROR/);
     await page.getByRole('button',{name:'← 暂停'}).click();
+    await expect(page.getByRole('button',{name:'继续本轮'})).toBeVisible();
     await page.getByRole('button',{name:'清空筛选'}).click();
   }
 
   await page.getByRole('button',{name:'5',exact:true}).click();
-  await page.getByRole('button',{name:/今日 10 题/}).click();
+  await page.getByRole('button',{name:/今日 5 题/}).click();
+  await page.getByRole('button',{name:'结束旧轮并开始'}).click();
   const firstStem=await page.locator('.question-card h1').textContent();
   const firstOption=page.getByRole('button',{name:'选项 A'});
   await firstOption.click();

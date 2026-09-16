@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { Attempt, BankChannel, ErrorReason, GradingMode, Mistake, OptionId, Question, Session, Settings, StudyFilters, StudyMode } from './domain/models';
+import type { Attempt, BankChannel, ErrorReason, FullBackup, GradingMode, MasteryStatus, Mistake, OptionId, Question, Session, Settings, StudyFilters, StudyMode } from './domain/models';
 import { EMPTY_FILTERS } from './domain/models';
 import { db } from './data/database';
 import { advanceImmediateSession, advanceReview, getRecoverableSession, installBank, savePending, startSession, submitAnswer } from './data/study-service';
@@ -28,6 +28,8 @@ const cards:Array<{mode:StudyMode;eyebrow:string;title:string;description:string
   {mode:'mistakes',eyebrow:'REVIEW',title:'错题本',description:'筛选、统计、重做并导出错题'},
 ];
 const optionLabels:OptionId[]=['A','B','C','D'];
+const masteryLabels:Record<MasteryStatus,string>={WEAK:'待巩固',LEARNING:'巩固中',MASTERED:'已掌握'};
+type SessionSummary={total:number;correct:number;wrong:number;uncertain:number};
 
 function testQuestions():Question[] {
   if(import.meta.env.MODE!=='test') return [];
@@ -46,6 +48,8 @@ export default function App() {
   const [selected,setSelected]=useState<OptionId|null>(null); const [uncertain,setUncertain]=useState(false); const [mistakeRows,setMistakeRows]=useState<MistakeRow[]>([]);
   const [allMistakes,setAllMistakes]=useState<Mistake[]>([]); const [notice,setNotice]=useState(''); const [error,setError]=useState(''); const [busy,setBusy]=useState(false);
   const [online,setOnline]=useState(()=>navigator.onLine); const [offlineReady,setOfflineReady]=useState(false); const [updateRegistration,setUpdateRegistration]=useState<ServiceWorkerRegistration|null>(null);
+  const [chapterPrompt,setChapterPrompt]=useState(false); const [replaceRequest,setReplaceRequest]=useState<{mode:StudyMode;override?:Question[]}|null>(null);
+  const [pendingBackup,setPendingBackup]=useState<{bundle:FullBackup;name:string}|null>(null); const [sessionSummary,setSessionSummary]=useState<SessionSummary|null>(null);
   const injectedQuestions=useMemo(testQuestions,[]);
   const activeChannel:BankChannel=injectedQuestions.length?'test-fixture':bankChannel;
   const authorizedLearningRelease=!injectedQuestions.length&&bankChannel==='release'&&releaseData.publication?.status==='authorized'&&releaseData.publication.scope==='phase1-learning-release'&&releaseData.publication.required_review_status==='reviewed';
@@ -53,6 +57,8 @@ export default function App() {
 
   useEffect(()=>{if(initialized.current)return;initialized.current=true;void initialize();},[]);
   useEffect(()=>{if(screen==='mistakes'&&questions.length) void refreshMistakes();},[screen,filters,questions]);
+  useEffect(()=>{if(screen!=='done'||!session){setSessionSummary(null);return;}void db.attempts.where('session_id').equals(session.id).toArray().then(attempts=>setSessionSummary({total:attempts.length,correct:attempts.filter(item=>item.grading?.is_correct).length,wrong:attempts.filter(item=>item.grading&&!item.grading.is_correct).length,uncertain:attempts.filter(item=>item.uncertain).length}));},[screen,session?.id]);
+  useEffect(()=>{if(!attempt?.grading)return;requestAnimationFrame(()=>document.querySelector('.feedback')?.scrollIntoView({behavior:'smooth',block:'start'}));},[attempt?.id]);
   useEffect(()=>{
     const wentOnline=()=>setOnline(true);const wentOffline=()=>setOnline(false);
     const ready=()=>setOfflineReady(true);
@@ -93,11 +99,19 @@ export default function App() {
     setCurrent(snapshot.content);setAttempt(saved);setSelected(saved.selected_option_id);setUncertain(saved.uncertain);
   }
 
+  const hasRecoverableSession=(value:Session|null)=>Boolean(value&&(value.completed_at===null||(value.grading_mode==='end_of_session'&&value.review_completed_at===null)));
+
+  async function requestBegin(mode:StudyMode,override?:Question[]) {
+    if(mode==='chapter'&&!filters.chapters.length){setChapterPrompt(true);setNotice('请先在筛选条件中选择至少一个章节。');return;}
+    if(hasRecoverableSession(session)&&screen==='home'){setReplaceRequest({mode,override});return;}
+    await begin(mode,override);
+  }
+
   async function begin(mode:StudyMode,override?:Question[]) {
     setBusy(true);setError('');setNotice(''); try {
       const settings=await db.settings.get('primary'); if(!settings) throw new Error('学习设置尚未初始化');
       const [mistakes,attempts,annotations]=await Promise.all([db.mistakes.toArray(),db.attempts.toArray(),db.reasonAnnotations.toArray()]);
-      const sampled=override?{questions:override,shortage:Math.max(0,count-override.length)}:sampleQuestions({questions,mistakes,attempts,reasonAnnotations:annotations,settings,filters,mode,count});
+      const sampled=override?{questions:override,shortage:0}:sampleQuestions({questions,mistakes,attempts,reasonAnnotations:annotations,settings,filters,mode,count});
       if(!sampled.questions.length) throw new Error(mode==='mistakes'?'当前筛选下没有可重做的错题':'当前筛选下没有可用题目');
       if(sampled.shortage>0) setNotice(`候选不足，已安全缩短为 ${sampled.questions.length} 题；没有重复 family。`);
       const next=await startSession(sampled.questions,mode,gradingMode,bankVersion,filters);await openSession(next);
@@ -149,26 +163,32 @@ export default function App() {
   }
 
   async function exportBackup() {const backup=await createFullBackup();downloadText(`811-backup-${new Date().toISOString().slice(0,10)}.json`,'application/json;charset=utf-8',JSON.stringify(backup,null,2)+'\n');setNotice('完整 JSON 备份已生成。');}
-  async function importBackup(file:File) {setBusy(true);try{const bundle=JSON.parse(await file.text());await restoreFullBackup(bundle);await installBank(questions,activeChannel,authorizedLearningRelease);setAllMistakes(await db.mistakes.toArray());setNotice('备份恢复完成。');const recovered=await getRecoverableSession();if(recovered)await openSession(recovered);else setScreen('home');}catch(cause){setError((cause as Error).message);}finally{setBusy(false);if(restoreInput.current)restoreInput.current.value='';}}
+  async function prepareBackup(file:File) {setError('');try{const bundle=JSON.parse(await file.text()) as FullBackup;if(bundle.scope?.kind!=='full_backup'||!Array.isArray(bundle.attempts)||!Array.isArray(bundle.mistakes))throw new Error('这不是完整的 811 JSON 备份。');setPendingBackup({bundle,name:file.name});}catch(cause){setError((cause as Error).message);}finally{if(restoreInput.current)restoreInput.current.value='';}}
+  async function importBackup(bundle:FullBackup) {setBusy(true);try{await restoreFullBackup(bundle);await installBank(questions,activeChannel,authorizedLearningRelease);setAllMistakes(await db.mistakes.toArray());setPendingBackup(null);setNotice('备份恢复完成。');const recovered=await getRecoverableSession();if(recovered)await openSession(recovered);else setScreen('home');}catch(cause){setError((cause as Error).message);}finally{setBusy(false);}}
 
   const answeredCount=session?.queue.filter(item=>item.attempt_id).length??0;
   const pendingReason=Boolean(attempt&&session?.pending_reason_attempt_ids.includes(attempt.id));
+  const resumeProgress=session?(session.completed_at&&session.grading_mode==='end_of_session'?session.review_index:Math.min(answeredCount,session.queue.length)):0;
   const orderedOptions=useMemo(()=>current&&session?(session.queue[screen==='review'?session.review_index:session.current_index]?.option_order??optionLabels).map(id=>current.options.find(option=>option.id===id)!).filter(Boolean):[],[current,session,screen]);
 
   if(screen==='home') return <main className="shell">
     <header className="masthead"><span className="brand-mark">811</span><div><p className="kicker">SIGNALS · SYSTEMS · REVIEW</p><h1>把公式认准，<br/>把陷阱看穿。</h1><p className="lede">从抽题、判题、错因到间隔重做，全部记录在本机。</p></div><aside><span>{injectedQuestions.length?'隔离测试题库':bankChannel==='reviewed-beta'?'Reviewed / Beta 题库':'正式题库'}</span><strong>{questions.length}<small> / 305</small></strong><p>{injectedQuestions.length?'仅供自动化测试':bankChannel==='reviewed-beta'?'已人工审题，可用于实际刷题':'项目方已授权的 Phase 1 学习题库'}</p></aside></header>
+    {!hasRecoverableSession(session)&&<button className="mobile-quick-start" disabled={busy} onClick={()=>void requestBegin('today')}>立即开始 {count} 题 <span>→</span></button>}
+    {hasRecoverableSession(session)&&<section className="resume-card"><div><span>未完成的练习</span><strong>{session?.grading_mode==='end_of_session'&&session.completed_at?'继续逐题复盘':`${cards.find(card=>card.mode===session?.mode)?.title??'练习'} · ${resumeProgress}/${session?.queue.length}`}</strong><small>题目顺序、答案和当前位置都已保存在本机</small></div><button className="primary" onClick={()=>session&&void openSession(session)}>继续本轮</button></section>}
+    {replaceRequest&&<section className="replace-prompt" role="alert"><div><strong>当前还有未完成的练习</strong><span>开始新练习会结束当前这一轮，已保存的答题记录仍会保留。</span></div><button onClick={()=>{const request=replaceRequest;setReplaceRequest(null);void begin(request.mode,request.override);}}>结束旧轮并开始</button><button onClick={()=>setReplaceRequest(null)}>取消</button></section>}
     <section className="controls" aria-label="练习设置">{!injectedQuestions.length&&<label><span>题库模式</span><select value={bankChannel} onChange={event=>void switchBank(event.target.value as UserBankChannel)}><option value="reviewed-beta">Reviewed / Beta</option><option value="release">正式 Release</option></select></label>}<div><span>本轮题量</span>{[5,10,20].map(value=><button aria-pressed={count===value} className={count===value?'active':''} key={value} onClick={()=>setCount(value)}>{value}</button>)}</div><label><span>判题方式</span><select value={gradingMode} onChange={event=>{const value=event.target.value as GradingMode;setGradingMode(value);void db.settings.update('primary',{grading_mode:value});}}><option value="immediate">答完立即判题</option><option value="end_of_session">本轮统一判题</option></select></label></section>
-    <FilterPanel filters={filters} onChange={setFilters} questions={questions}/>
-    {!injectedQuestions.length&&<section className="pwa-state" aria-live="polite"><span className={online?'online':'offline'}><i/>{online?'当前联网':'当前离线'}</span>{offlineReady&&<span>已可离线使用</span>}{!offlineReady&&online&&<small>正在准备离线资源…</small>}{updateRegistration&&<button onClick={()=>activatePwaUpdate(updateRegistration)}>更新到新版</button>}</section>}
+    <FilterPanel filters={filters} onChange={value=>{setFilters(value);setChapterPrompt(false);}} questions={questions} forceOpen={chapterPrompt}/>
+    {!injectedQuestions.length&&<><section className="pwa-state" aria-live="polite"><span className={online?'online':'offline'}><i/>{online?'当前联网':'当前离线'}</span>{offlineReady&&<span>已可离线使用</span>}{!offlineReady&&online&&<small>正在准备离线资源…</small>}{updateRegistration&&<button onClick={()=>activatePwaUpdate(updateRegistration)}>更新到新版</button>}</section><details className="offline-help"><summary>如何安装到手机或电脑</summary><p>iPhone/iPad：Safari 的“共享”→“添加到主屏幕”；Android 或电脑 Chrome/Edge：浏览器菜单中选择“安装应用”。首次看到“已可离线使用”后，断网也能继续刷题。</p></details></>}
     {notice&&<p className="notice success" role="status">{notice}</p>}{error&&<p className="notice" role="alert">{error}</p>}
-    <section className="card-grid">{cards.map((card,index)=><button disabled={busy} className="mode-card" key={card.mode} onClick={()=>card.mode==='mistakes'?setScreen('mistakes'):void begin(card.mode)}><span>{card.eyebrow}</span><b>0{index+1}</b><h2>{card.title}</h2><p>{card.description}</p><i>{card.mode==='mistakes'?`${allMistakes.length} 道记录`:'开始 →'}</i></button>)}</section>
-    <section className="data-actions"><div><strong>本地数据</strong><span>用于迁移或完整恢复当前学习记录</span></div><button onClick={()=>void exportBackup()}>导出完整备份</button><button onClick={()=>restoreInput.current?.click()}>恢复 JSON 备份</button><input ref={restoreInput} className="visually-hidden" type="file" accept="application/json,.json" onChange={event=>{const file=event.target.files?.[0];if(file)void importBackup(file);}}/></section>
+    <section className="card-grid">{cards.map((card,index)=>{const title=card.mode==='today'?`今日 ${count} 题`:card.title;const description=card.mode==='today'?'优先安排近期错题、薄弱知识点和当前章节':card.description;return <button disabled={busy} className="mode-card" key={card.mode} onClick={()=>card.mode==='mistakes'?setScreen('mistakes'):void requestBegin(card.mode)}><span>{card.eyebrow}</span><b>0{index+1}</b><h2>{title}</h2><p>{description}</p><i>{card.mode==='mistakes'?`${allMistakes.length} 道记录`:'开始 →'}</i></button>;})}</section>
+    <section className="data-actions"><div><strong>本地数据</strong><span>用于迁移或完整恢复当前学习记录</span></div><button onClick={()=>void exportBackup()}>导出完整备份</button><button onClick={()=>restoreInput.current?.click()}>恢复 JSON 备份</button><input ref={restoreInput} className="visually-hidden" type="file" accept="application/json,.json" onChange={event=>{const file=event.target.files?.[0];if(file)void prepareBackup(file);}}/></section>
+    {pendingBackup&&<section className="backup-confirm" role="alert"><div><strong>准备恢复：{pendingBackup.name}</strong><span>备份于 {new Date(pendingBackup.bundle.exported_at).toLocaleString('zh-CN')}，包含 {pendingBackup.bundle.attempts.length} 次作答、{pendingBackup.bundle.mistakes.length} 道错题。确认后会覆盖当前本地学习记录。</span></div><button onClick={()=>void exportBackup()}>先备份当前记录</button><button className="danger" disabled={busy} onClick={()=>void importBackup(pendingBackup.bundle)}>确认覆盖并恢复</button><button onClick={()=>setPendingBackup(null)}>取消</button></section>}
     <footer>Phase 1 · 默认即时判题 · {injectedQuestions.length?'隔离测试':bankChannel==='reviewed-beta'?`Reviewed/Beta ${questions.length} / 305`:`正式题库 ${questions.length} / 305`}</footer>
   </main>;
 
-  if(screen==='mistakes') return <main className="shell mistakes-screen"><header className="section-head"><button onClick={()=>setScreen('home')}>← 返回首页</button><div><p className="kicker">MISTAKE BOOK</p><h1>错题本</h1><p>共 {mistakeRows.length} 道符合条件的记录</p></div></header><FilterPanel title="错题筛选" filters={filters} onChange={setFilters} questions={questions}/>{notice&&<p className="notice success" role="status">{notice}</p>}{error&&<p className="notice" role="alert">{error}</p>}<div className="export-bar"><button onClick={()=>void begin('mistakes',mistakeRows.slice(0,count).map(row=>row.question))} disabled={!mistakeRows.length}>重做筛选结果</button><button onClick={()=>void exportMistakes('md')}>Markdown</button><button onClick={()=>void exportMistakes('csv')}>CSV</button><button onClick={()=>void exportMistakes('json')}>JSON</button><button onClick={()=>void exportBackup()}>完整备份</button></div><section className="mistake-list">{mistakeRows.map(({question,mistake})=><article key={question.id}><div><span>第 {question.chapter} 章 · {question.knowledge_point}</span><b>{mistake.status}</b></div><h2><MathText text={question.stem}/></h2><dl><div><dt>答错</dt><dd>{mistake.mistake_count}</dd></div><div><dt>不确定</dt><dd>{mistake.uncertain_count}</dd></div><div><dt>连续有效正确</dt><dd>{mistake.spaced_correct_streak} / 3</dd></div></dl><button onClick={()=>void begin('mistakes',[question])}>重做此题</button></article>)}{!mistakeRows.length&&<p className="empty-state">当前筛选下没有错题。完成一次答错或“不确定”作答后会自动收纳。</p>}</section></main>;
+  if(screen==='mistakes') return <main className="shell mistakes-screen"><header className="section-head"><button onClick={()=>setScreen('home')}>← 返回首页</button><div><p className="kicker">MISTAKE BOOK</p><h1>错题本</h1><p>共 {mistakeRows.length} 道符合条件的记录</p></div></header><FilterPanel title="错题筛选" filters={filters} onChange={setFilters} questions={questions}/>{notice&&<p className="notice success" role="status">{notice}</p>}{error&&<p className="notice" role="alert">{error}</p>}<div className="export-bar"><button onClick={()=>void requestBegin('mistakes',mistakeRows.slice(0,count).map(row=>row.question))} disabled={!mistakeRows.length}>重做筛选结果</button><button onClick={()=>void exportMistakes('md')}>Markdown</button><button onClick={()=>void exportMistakes('csv')}>CSV</button><button onClick={()=>void exportMistakes('json')}>JSON</button><button onClick={()=>void exportBackup()}>完整备份</button></div><section className="mistake-list">{mistakeRows.map(({question,mistake})=><article key={question.id}><div><span>第 {question.chapter} 章 · {question.knowledge_point}</span><b>{masteryLabels[mistake.status]}</b></div><h2><MathText text={question.stem}/></h2><p className="due-label">{formatDue(mistake)}</p><dl><div><dt>答错</dt><dd>{mistake.mistake_count}</dd></div><div><dt>不确定</dt><dd>{mistake.uncertain_count}</dd></div><div><dt>连续有效正确</dt><dd>{mistake.spaced_correct_streak} / 3</dd></div></dl><button onClick={()=>void requestBegin('mistakes',[question])}>重做此题</button></article>)}{!mistakeRows.length&&<p className="empty-state">当前筛选下没有错题。完成一次答错或“不确定”作答后会自动收纳。</p>}</section></main>;
 
-  if(screen==='done') return <main className="shell done"><p className="kicker">SESSION COMPLETE</p><h1>本轮完成</h1><p>{session?.grading_mode==='end_of_session'?'整轮已统一判分并完成逐题复盘。':'每次作答均已即时判定并保存。'}</p><button className="primary" onClick={()=>{setScreen('home');setSession(null);setNotice('本轮记录已保存。');}}>返回首页</button></main>;
+  if(screen==='done') return <main className="shell done"><p className="kicker">SESSION COMPLETE</p><h1>本轮完成</h1>{sessionSummary?<section className="session-summary"><div><strong>{sessionSummary.correct}/{sessionSummary.total}</strong><span>答对</span></div><div><strong>{sessionSummary.wrong}</strong><span>答错</span></div><div><strong>{sessionSummary.uncertain}</strong><span>不确定</span></div></section>:<p>正在统计本轮结果…</p>}<p>{session?.grading_mode==='end_of_session'?'整轮已统一判分并完成逐题复盘。':'每次作答均已即时判定并保存。'}</p><div className="done-actions"><button onClick={()=>setScreen('mistakes')}>查看待巩固题</button><button className="primary" onClick={()=>{setScreen('home');setSession(null);setNotice('本轮记录已保存。');}}>返回首页</button></div></main>;
 
   if(!current||!session) return <main className="shell"><p>正在恢复会话…</p></main>;
   if(screen==='review'&&attempt?.grading) return <main className="quiz-shell review-shell"><header className="quiz-top"><button onClick={()=>setScreen('home')}>← 暂停复盘</button><div><span>轮末逐题结果</span><strong>{session.review_index+1} / {session.queue.length}</strong></div></header><div className="progress"><i style={{width:`${(session.review_index+1)/session.queue.length*100}%`}}/></div><article className="question-card"><div className="meta"><span>第 {current.chapter} 章</span><span>{current.knowledge_point}</span></div><h1><MathText text={current.stem}/></h1><ResultOptions question={current} order={session.queue[session.review_index].option_order} attempt={attempt}/><Feedback question={current} attempt={attempt} pendingReason={pendingReason} onReason={saveReason}/>{error&&<p className="notice" role="alert">{error}</p>}<div className="action-row"><button className="primary" disabled={pendingReason||busy} onClick={()=>void nextReview()}>{session.review_index+1===session.queue.length?'完成复盘':'下一条结果'}</button></div></article></main>;
@@ -187,4 +207,13 @@ function splitExplanation(value:string) {
   const match=/易错(?:点|提醒)[：:]/.exec(value);
   if(!match||match.index===undefined) return {short:value.trim(),pitfall:''};
   return {short:value.slice(0,match.index).trim(),pitfall:value.slice(match.index+match[0].length).trim()};
+}
+
+function formatDue(mistake:Mistake) {
+  if(mistake.status==='MASTERED') return '已完成三次有效间隔复习';
+  if(!mistake.next_due_at) return '待安排复习';
+  const days=Math.ceil((new Date(mistake.next_due_at).getTime()-Date.now())/86_400_000);
+  if(days<=0)return '今天可进行有效复习';
+  if(days===1)return '明天可进行有效复习';
+  return `${days} 天后可进行有效复习`;
 }

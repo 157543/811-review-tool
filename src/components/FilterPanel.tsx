@@ -1,15 +1,16 @@
 import type { ErrorReason, MasteryStatus, Question, QuestionSubtype, StudyFilters } from '../domain/models';
 import reasons from '../../data/registries/error-reasons.json';
 
-interface Props { filters:StudyFilters; onChange:(filters:StudyFilters)=>void; questions:Question[]; title?:string }
+interface Props { filters:StudyFilters; onChange:(filters:StudyFilters)=>void; questions:Question[]; title?:string; forceOpen?:boolean }
 const subtypeLabels:Record<QuestionSubtype,string>={concept:'概念',formula:'公式',transform_pair:'变换对',error_discrimination:'易错辨析'};
 const statusLabels:Record<MasteryStatus,string>={WEAK:'薄弱',LEARNING:'巩固中',MASTERED:'已掌握'};
 const toggle=<T,>(values:T[],value:T)=>values.includes(value)?values.filter(item=>item!==value):[...values,value];
 
-export function FilterPanel({filters,onChange,questions,title='筛选条件'}:Props) {
-  const knowledge=[...new Map(questions.map(question=>[question.knowledge_point_id,{id:question.knowledge_point_id,label:question.knowledge_point}])).values()];
+export function FilterPanel({filters,onChange,questions,title='筛选条件',forceOpen=false}:Props) {
+  const knowledgeQuestions=filters.chapters.length?questions.filter(question=>filters.chapters.includes(question.chapter)):questions;
+  const knowledge=[...new Map(knowledgeQuestions.map(question=>[question.knowledge_point_id,{id:question.knowledge_point_id,label:question.knowledge_point}])).values()];
   const active=filters.chapters.length+filters.subtypes.length+filters.user_error_reasons.length+filters.statuses.length+filters.knowledge_point_ids.length;
-  return <details className="filter-panel" open={active>0}>
+  return <details className="filter-panel" open={forceOpen||active>0}>
     <summary>{title}<small>{active?`已选 ${active} 项`:'不限制'}</small></summary>
     <div className="filter-groups">
       <fieldset><legend>章节</legend><div className="chip-row">{[1,2,3,4,5].map(chapter=><button type="button" aria-pressed={filters.chapters.includes(chapter)} key={chapter} onClick={()=>onChange({...filters,chapters:toggle(filters.chapters,chapter)})}>第 {chapter} 章</button>)}</div></fieldset>

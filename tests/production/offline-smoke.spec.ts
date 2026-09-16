@@ -11,7 +11,7 @@ test('precache makes the full study flow available offline',async({page,context}
     if(navigator.serviceWorker.controller) return;
     await new Promise<void>(resolve=>navigator.serviceWorker.addEventListener('controllerchange',()=>resolve(),{once:true}));
   });
-  await expect(page.getByText('已可离线使用')).toBeVisible();
+  await expect(page.getByText('已可离线使用',{exact:true})).toBeVisible();
 
   await context.setOffline(true);
   await page.reload({waitUntil:'domcontentloaded'});

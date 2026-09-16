@@ -1,0 +1,25 @@
+.mobile-quick-start {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-quick-start {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 0;
+    padding: 15px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #d95136;
+    color: #fff;
+    font-weight: 800;
+    min-height: 52px;
+    cursor: pointer;
+  }
+
+  .mobile-quick-start span {
+    font-size: 20px;
+  }
+}

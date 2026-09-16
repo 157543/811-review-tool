@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import 'katex/dist/katex.min.css';
 import './pwa.css';
+import './ux.css';
 import App from './App';
 import { registerOfflineSupport } from './pwa';
 
