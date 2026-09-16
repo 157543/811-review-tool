@@ -16,7 +16,7 @@ export interface SamplingInput {
 export interface SamplingResult {
   questions: Question[];
   requestedCount: number;
-  bucketCounts: Record<'recent'|'weak'|'current'|'old'|'fallback',number>;
+  bucketCounts: Record<'due'|'recent'|'weak'|'current'|'old'|'fallback',number>;
   shortage: number;
 }
 
@@ -63,7 +63,7 @@ export function sampleQuestions(input:SamplingInput):SamplingResult {
   const recentAttempts=[...attempts].filter(attempt=>attempt.grading!==null).sort((a,b)=>b.submitted_at.localeCompare(a.submitted_at));
   const cooldownFamilies=new Set(recentAttempts.slice(0,settings.family_cooldown_count).map(attempt=>questionById.get(attempt.question_id)?.family_id).filter((id):id is string=>Boolean(id)));
   const selected:Question[]=[]; const selectedFamilies=new Set<string>();
-  const bucketCounts={recent:0,weak:0,current:0,old:0,fallback:0};
+  const bucketCounts={due:0,recent:0,weak:0,current:0,old:0,fallback:0};
   const pick=(pool:Question[],amount:number,bucket:keyof typeof bucketCounts,relaxCooldown=false)=>{
     if(amount<=0) return;
     const ordered=weightedOrder(pool.filter(question=>!selectedFamilies.has(question.family_id)&&(relaxCooldown||mode==='mistakes'||!cooldownFamilies.has(question.family_id))),settings,random);
@@ -76,6 +76,7 @@ export function sampleQuestions(input:SamplingInput):SamplingResult {
   };
 
   if(mode==='today') {
+    const due=eligible.filter(question=>{const mistake=mistakeByQuestion.get(question.id);return mistake?.status!=='MASTERED'&&Boolean(mistake?.next_due_at)&&Date.parse(mistake!.next_due_at!)<=now.getTime();});
     const recentCutoff=now.getTime()-settings.recent_window_days*86_400_000;
     const recent=eligible.filter(question=>{const mistake=mistakeByQuestion.get(question.id);return mistake!==undefined&&[mistake.last_wrong_at,mistake.last_uncertain_at].filter((value):value is string=>Boolean(value)).some(value=>Date.parse(value)>=recentCutoff);});
     const lastThirty=recentAttempts.slice(0,30); const knowledgeStats=new Map<string,{total:number;miss:number}>();
@@ -84,7 +85,8 @@ export function sampleQuestions(input:SamplingInput):SamplingResult {
     const weak=eligible.filter(question=>weakIds.has(question.knowledge_point_id)||['WEAK','LEARNING'].includes(mistakeByQuestion.get(question.id)?.status??''));
     const current=eligible.filter(question=>question.chapter===settings.current_chapter);
     const old=eligible.filter(question=>question.chapter!==settings.current_chapter);
-    pick(recent,Math.min(3,count),'recent');
+    pick(due,count,'due');
+    pick(recent,Math.min(3,count-selected.length),'recent');
     pick(weak,Math.min(2,count-selected.length),'weak');
     pick(current,Math.min(3,count-selected.length),'current');
     pick(old,Math.min(2,count-selected.length),'old');
