@@ -40,4 +40,7 @@ test('production release supports chapter entry, answering, recovery and mistake
   await page.getByRole('button',{name:/错题本/}).click();
   await expect(page.getByRole('heading',{name:'错题本'})).toBeVisible();
   await expect(page.getByText('不确定').first()).toBeVisible();
+  await page.getByRole('button',{name:'重做此题'}).first().click();
+  await expect(page.getByText('当前还有未完成的练习')).toBeVisible();
+  await expect(page.getByRole('button',{name:'继续本轮'})).toBeVisible();
 });

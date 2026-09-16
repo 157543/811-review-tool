@@ -103,7 +103,7 @@ export default function App() {
 
   async function requestBegin(mode:StudyMode,override?:Question[]) {
     if(mode==='chapter'&&!filters.chapters.length){setChapterPrompt(true);setNotice('请先在筛选条件中选择至少一个章节。');return;}
-    if(hasRecoverableSession(session)&&screen==='home'){setReplaceRequest({mode,override});return;}
+    if(hasRecoverableSession(session)){setReplaceRequest({mode,override});if(screen!=='home')setScreen('home');return;}
     await begin(mode,override);
   }
 
@@ -174,7 +174,7 @@ export default function App() {
   if(screen==='home') return <main className="shell">
     <header className="masthead"><span className="brand-mark">811</span><div><p className="kicker">SIGNALS · SYSTEMS · REVIEW</p><h1>把公式认准，<br/>把陷阱看穿。</h1><p className="lede">从抽题、判题、错因到间隔重做，全部记录在本机。</p></div><aside><span>{injectedQuestions.length?'隔离测试题库':bankChannel==='reviewed-beta'?'Reviewed / Beta 题库':'正式题库'}</span><strong>{questions.length}<small> / 305</small></strong><p>{injectedQuestions.length?'仅供自动化测试':bankChannel==='reviewed-beta'?'已人工审题，可用于实际刷题':'项目方已授权的 Phase 1 学习题库'}</p></aside></header>
     {!hasRecoverableSession(session)&&<button className="mobile-quick-start" disabled={busy} onClick={()=>void requestBegin('today')}>立即开始 {count} 题 <span>→</span></button>}
-    {hasRecoverableSession(session)&&<section className="resume-card"><div><span>未完成的练习</span><strong>{session?.grading_mode==='end_of_session'&&session.completed_at?'继续逐题复盘':`${cards.find(card=>card.mode===session?.mode)?.title??'练习'} · ${resumeProgress}/${session?.queue.length}`}</strong><small>题目顺序、答案和当前位置都已保存在本机</small></div><button className="primary" onClick={()=>session&&void openSession(session)}>继续本轮</button></section>}
+    {hasRecoverableSession(session)&&<section className="resume-card"><div><span>未完成的练习</span><strong>{session?.grading_mode==='end_of_session'&&session.completed_at?'继续逐题复盘':`${session?.mode==='today'?`今日 ${session.queue.length} 题`:cards.find(card=>card.mode===session?.mode)?.title??'练习'} · ${resumeProgress}/${session?.queue.length}`}</strong><small>题目顺序、答案和当前位置都已保存在本机</small></div><button className="primary" onClick={()=>session&&void openSession(session)}>继续本轮</button></section>}
     {replaceRequest&&<section className="replace-prompt" role="alert"><div><strong>当前还有未完成的练习</strong><span>开始新练习会结束当前这一轮，已保存的答题记录仍会保留。</span></div><button onClick={()=>{const request=replaceRequest;setReplaceRequest(null);void begin(request.mode,request.override);}}>结束旧轮并开始</button><button onClick={()=>setReplaceRequest(null)}>取消</button></section>}
     <section className="controls" aria-label="练习设置">{!injectedQuestions.length&&<label><span>题库模式</span><select value={bankChannel} onChange={event=>void switchBank(event.target.value as UserBankChannel)}><option value="reviewed-beta">Reviewed / Beta</option><option value="release">正式 Release</option></select></label>}<div><span>本轮题量</span>{[5,10,20].map(value=><button aria-pressed={count===value} className={count===value?'active':''} key={value} onClick={()=>setCount(value)}>{value}</button>)}</div><label><span>判题方式</span><select value={gradingMode} onChange={event=>{const value=event.target.value as GradingMode;setGradingMode(value);void db.settings.update('primary',{grading_mode:value});}}><option value="immediate">答完立即判题</option><option value="end_of_session">本轮统一判题</option></select></label></section>
     <FilterPanel filters={filters} onChange={value=>{setFilters(value);setChapterPrompt(false);}} questions={questions} forceOpen={chapterPrompt}/>
