@@ -34,3 +34,5 @@ pnpm build
 ## 私有来源边界
 
 `private_sources/`、`source_notes/`、所有 PDF 与内部测试 fixture 均被 `.gitignore` 排除。生产构建后还会扫描文件名、文本内容和 PDF 文件头；发现私有路径、资料名、fixture 标识或 PDF 会使构建失败。
+
+GitHub Pages 通过 VITE_BASE_PATH=/811-review-tool/ 构建；部署工作流生成 404.html，深路径刷新会回到应用入口并由 IndexedDB 恢复未完成会话。
