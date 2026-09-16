@@ -13,6 +13,7 @@ import reviewedBeta from '../data/questions/reviewed-beta.json';
 import reasons from '../data/registries/error-reasons.json';
 import { MathText } from './components/MathText';
 import { FilterPanel } from './components/FilterPanel';
+import { activatePwaUpdate, PWA_EVENTS } from './pwa';
 import './styles.css';
 
 type Screen='home'|'quiz'|'review'|'mistakes'|'done';
@@ -44,6 +45,7 @@ export default function App() {
   const [session,setSession]=useState<Session|null>(null); const [current,setCurrent]=useState<Question|null>(null); const [attempt,setAttempt]=useState<Attempt|null>(null);
   const [selected,setSelected]=useState<OptionId|null>(null); const [uncertain,setUncertain]=useState(false); const [mistakeRows,setMistakeRows]=useState<MistakeRow[]>([]);
   const [allMistakes,setAllMistakes]=useState<Mistake[]>([]); const [notice,setNotice]=useState(''); const [error,setError]=useState(''); const [busy,setBusy]=useState(false);
+  const [online,setOnline]=useState(()=>navigator.onLine); const [offlineReady,setOfflineReady]=useState(false); const [updateRegistration,setUpdateRegistration]=useState<ServiceWorkerRegistration|null>(null);
   const injectedQuestions=useMemo(testQuestions,[]);
   const activeChannel:BankChannel=injectedQuestions.length?'test-fixture':bankChannel;
   const authorizedLearningRelease=!injectedQuestions.length&&bankChannel==='release'&&releaseData.publication?.status==='authorized'&&releaseData.publication.scope==='phase1-learning-release'&&releaseData.publication.required_review_status==='reviewed';
@@ -51,6 +53,14 @@ export default function App() {
 
   useEffect(()=>{if(initialized.current)return;initialized.current=true;void initialize();},[]);
   useEffect(()=>{if(screen==='mistakes'&&questions.length) void refreshMistakes();},[screen,filters,questions]);
+  useEffect(()=>{
+    const wentOnline=()=>setOnline(true);const wentOffline=()=>setOnline(false);
+    const ready=()=>setOfflineReady(true);
+    const update=(event:Event)=>setUpdateRegistration((event as CustomEvent<ServiceWorkerRegistration>).detail);
+    window.addEventListener('online',wentOnline);window.addEventListener('offline',wentOffline);
+    window.addEventListener(PWA_EVENTS.offlineReady,ready);window.addEventListener(PWA_EVENTS.updateReady,update);
+    return()=>{window.removeEventListener('online',wentOnline);window.removeEventListener('offline',wentOffline);window.removeEventListener(PWA_EVENTS.offlineReady,ready);window.removeEventListener(PWA_EVENTS.updateReady,update);};
+  },[]);
 
   async function initialize() {
     setBusy(true); try {
@@ -62,10 +72,10 @@ export default function App() {
   }
 
   async function openSession(next:Session) {
-    setSession(next);pendingRef.current={selection:null,uncertain:false};setSelected(null);setUncertain(false);setAttempt(null);
-    if(next.completed_at&&next.grading_mode==='end_of_session'&&!next.review_completed_at) { setScreen('review');await loadReviewItem(next);return; }
+    setSession(next);setCurrent(null);pendingRef.current={selection:null,uncertain:false};setSelected(null);setUncertain(false);setAttempt(null);
+    if(next.completed_at&&next.grading_mode==='end_of_session'&&!next.review_completed_at) { await loadReviewItem(next);setScreen('review');return; }
     if(next.completed_at) {setScreen('done');setCurrent(null);return;}
-    setScreen('quiz');await loadQuizItem(next);
+    await loadQuizItem(next);setScreen('quiz');
   }
 
   async function loadQuizItem(next:Session) {
@@ -149,6 +159,7 @@ export default function App() {
     <header className="masthead"><span className="brand-mark">811</span><div><p className="kicker">SIGNALS · SYSTEMS · REVIEW</p><h1>把公式认准，<br/>把陷阱看穿。</h1><p className="lede">从抽题、判题、错因到间隔重做，全部记录在本机。</p></div><aside><span>{injectedQuestions.length?'隔离测试题库':bankChannel==='reviewed-beta'?'Reviewed / Beta 题库':'正式题库'}</span><strong>{questions.length}<small> / 305</small></strong><p>{injectedQuestions.length?'仅供自动化测试':bankChannel==='reviewed-beta'?'已人工审题，可用于实际刷题':'项目方已授权的 Phase 1 学习题库'}</p></aside></header>
     <section className="controls" aria-label="练习设置">{!injectedQuestions.length&&<label><span>题库模式</span><select value={bankChannel} onChange={event=>void switchBank(event.target.value as UserBankChannel)}><option value="reviewed-beta">Reviewed / Beta</option><option value="release">正式 Release</option></select></label>}<div><span>本轮题量</span>{[5,10,20].map(value=><button aria-pressed={count===value} className={count===value?'active':''} key={value} onClick={()=>setCount(value)}>{value}</button>)}</div><label><span>判题方式</span><select value={gradingMode} onChange={event=>{const value=event.target.value as GradingMode;setGradingMode(value);void db.settings.update('primary',{grading_mode:value});}}><option value="immediate">答完立即判题</option><option value="end_of_session">本轮统一判题</option></select></label></section>
     <FilterPanel filters={filters} onChange={setFilters} questions={questions}/>
+    {!injectedQuestions.length&&<section className="pwa-state" aria-live="polite"><span className={online?'online':'offline'}><i/>{online?'当前联网':'当前离线'}</span>{offlineReady&&<span>已可离线使用</span>}{!offlineReady&&online&&<small>正在准备离线资源…</small>}{updateRegistration&&<button onClick={()=>activatePwaUpdate(updateRegistration)}>更新到新版</button>}</section>}
     {notice&&<p className="notice success" role="status">{notice}</p>}{error&&<p className="notice" role="alert">{error}</p>}
     <section className="card-grid">{cards.map((card,index)=><button disabled={busy} className="mode-card" key={card.mode} onClick={()=>card.mode==='mistakes'?setScreen('mistakes'):void begin(card.mode)}><span>{card.eyebrow}</span><b>0{index+1}</b><h2>{card.title}</h2><p>{card.description}</p><i>{card.mode==='mistakes'?`${allMistakes.length} 道记录`:'开始 →'}</i></button>)}</section>
     <section className="data-actions"><div><strong>本地数据</strong><span>用于迁移或完整恢复当前学习记录</span></div><button onClick={()=>void exportBackup()}>导出完整备份</button><button onClick={()=>restoreInput.current?.click()}>恢复 JSON 备份</button><input ref={restoreInput} className="visually-hidden" type="file" accept="application/json,.json" onChange={event=>{const file=event.target.files?.[0];if(file)void importBackup(file);}}/></section>

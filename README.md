@@ -36,3 +36,13 @@ pnpm build
 `private_sources/`、`source_notes/`、所有 PDF 与内部测试 fixture 均被 `.gitignore` 排除。生产构建后还会扫描文件名、文本内容和 PDF 文件头；发现私有路径、资料名、fixture 标识或 PDF 会使构建失败。
 
 GitHub Pages 通过 VITE_BASE_PATH=/811-review-tool/ 构建；部署工作流生成 404.html，深路径刷新会回到应用入口并由 IndexedDB 恢复未完成会话。
+
+## 离线使用
+
+生产站点是可安装的 PWA。首次联网打开后，等待首页出现“已可离线使用”，浏览器就已缓存应用、公式字体和完整 305 题题库。之后即使断网，也可以从浏览器、桌面图标或手机主屏幕打开，继续刷题、查看错题和恢复未完成会话；答题记录仍保存在本机 IndexedDB。
+
+- iPhone / iPad：Safari 中点“共享”→“添加到主屏幕”。
+- Android / Chrome：浏览器菜单中选择“安装应用”或“添加到主屏幕”。
+- 桌面 Chrome / Edge：地址栏右侧选择“安装”。
+
+清除该站点的浏览数据会同时删除离线缓存和本地学习记录。需要迁移或重装前，请先在首页导出完整 JSON 备份。

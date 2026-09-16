@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/check-private-leaks.ts dist",
+    "build": "tsc -b && vite build && node scripts/create-pages-fallback.ts dist/404.html && node scripts/create-offline-assets.ts && node scripts/check-private-leaks.ts dist",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -38,7 +38,7 @@
     "bundle:bank": "node scripts/bundle-bank.ts && node scripts/validate-questions.ts --mode release",
     "check:katex": "node scripts/check-katex.ts",
     "check:private": "node scripts/check-private-leaks.ts dist",
-    "check": "node scripts/validate-schemas.ts && node scripts/validate-blueprint.ts && node scripts/validate-questions.ts --mode development && node scripts/check-katex.ts && vitest run && tsc -b && vite build && node scripts/check-private-leaks.ts dist"
+    "check": "node scripts/validate-schemas.ts && node scripts/validate-blueprint.ts && node scripts/validate-questions.ts --mode development && node scripts/check-katex.ts && vitest run && tsc -b && vite build && node scripts/create-pages-fallback.ts dist/404.html && node scripts/create-offline-assets.ts && node scripts/check-private-leaks.ts dist"
   },
   "dependencies": {
     "ajv": "8.17.1",

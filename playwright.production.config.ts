@@ -8,7 +8,11 @@ export default defineConfig({
   workers:1,
   reporter:[['list']],
   use:{baseURL:'http://127.0.0.1:4174',trace:'retain-on-failure'},
-  projects:[{name:'production-chromium',use:{...devices['Desktop Chrome'],channel:browserChannel}}],
+  projects:[
+    {name:'production-chromium',use:{...devices['Desktop Chrome'],channel:browserChannel}},
+    {name:'production-iphone',use:{...devices['iPhone 13'],browserName:'chromium',channel:browserChannel}},
+    {name:'production-ipad',use:{...devices['iPad Mini'],browserName:'chromium',channel:browserChannel}},
+  ],
   webServer:{
     command:'node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4174',
     url:'http://127.0.0.1:4174',

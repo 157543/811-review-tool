@@ -1,0 +1,47 @@
+.pwa-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: -8px 0 22px;
+  color: #5f6c65;
+  font-size: 13px;
+}
+
+.pwa-state span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #e5e9e2;
+  padding: 7px 10px;
+  border-radius: 99px;
+}
+
+.pwa-state span i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e7b56;
+}
+
+.pwa-state span.offline {
+  background: #f4ddd6;
+  color: #7c2b1c;
+}
+
+.pwa-state span.offline i {
+  background: #d95136;
+}
+
+.pwa-state small {
+  color: #77827c;
+}
+
+.pwa-state button {
+  min-height: 40px;
+  border: 1px solid #b9c0b9;
+  background: #fff;
+  padding: 7px 11px;
+  border-radius: 99px;
+  cursor: pointer;
+}

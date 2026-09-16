@@ -37,8 +37,6 @@ jobs:
           test ! -d tests/fixtures
           test -z "$(find . -path ./node_modules -prune -o -type f -iname '*.pdf' -print)"
       - run: pnpm run build
-      - name: Add SPA refresh fallback
-        run: node scripts/create-pages-fallback.ts dist/404.html
       - run: node scripts/check-private-leaks.ts dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
