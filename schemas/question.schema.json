@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:811-review-tool:question:1.0.0",
+  "title": "Phase 1 Question",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","id","revision","family_id","variant_role","chapter","section","blueprint_section","knowledge_point_id","knowledge_point","type","subtype","importance_811","syllabus","can_skip","notation_profile","stem","options","correct_option","explanation","source","review"],
+  "properties": {
+    "schema_version": {"const":"1.0.0"},
+    "id": {"$ref":"#/$defs/id"},
+    "revision": {"type":"integer","minimum":1},
+    "family_id": {"$ref":"#/$defs/id"},
+    "variant_role": {"enum":["base","variant"]},
+    "chapter": {"type":"integer","minimum":1,"maximum":5},
+    "section": {"type":"string","pattern":"^[1-5]\\.[1-9][0-9]*$"},
+    "blueprint_section": {"enum":["1.1","1.2","1.3","1.4","1.5-1.6","2.1","2.2","2.3","2.4","2.5","3.2","3.3","3.4","3.5","3.6","3.7","3.8","3.9-3.11","4.1","4.2","4.3","4.4","4.5","4.6","4.7","5.1","5.2","5.3","5.4","5.5","5.6","5.7","5.8"]},
+    "knowledge_point_id": {"$ref":"#/$defs/id"},
+    "knowledge_point": {"$ref":"#/$defs/text"},
+    "type": {"const":"mcq"},
+    "subtype": {"enum":["concept","formula","transform_pair","error_discrimination"]},
+    "importance_811": {"type":"integer","minimum":1,"maximum":5},
+    "syllabus": {"enum":["explicit","derived","boundary"]},
+    "can_skip": {"type":"boolean"},
+    "notation_profile": {"const":"oppenheim-2e-ct-dt-v1"},
+    "stem": {"$ref":"#/$defs/text"},
+    "options": {
+      "type":"array","minItems":4,"maxItems":4,"items":{"$ref":"#/$defs/option"},
+      "allOf":[
+        {"contains":{"type":"object","properties":{"id":{"const":"A"}},"required":["id"]},"minContains":1,"maxContains":1},
+        {"contains":{"type":"object","properties":{"id":{"const":"B"}},"required":["id"]},"minContains":1,"maxContains":1},
+        {"contains":{"type":"object","properties":{"id":{"const":"C"}},"required":["id"]},"minContains":1,"maxContains":1},
+        {"contains":{"type":"object","properties":{"id":{"const":"D"}},"required":["id"]},"minContains":1,"maxContains":1}
+      ]
+    },
+    "correct_option": {"$ref":"#/$defs/optionId"},
+    "explanation": {"$ref":"#/$defs/text"},
+    "figures": {"type":"array","minItems":1,"items":{"$ref":"#/$defs/figure"}},
+    "source": {"$ref":"#/$defs/source"},
+    "review": {"$ref":"#/$defs/review"}
+  },
+  "allOf":[
+    {"if":{"type":"object","properties":{"variant_role":{"const":"base"}},"required":["variant_role"]},"then":{"properties":{"source":{"type":"object","properties":{"type":{"not":{"const":"CONTROLLED_VARIANT"}}}}}}},
+    {"if":{"type":"object","properties":{"review":{"type":"object","properties":{"status":{"const":"verified"}},"required":["status"]}},"required":["review"]},"then":{"properties":{"source":{"type":"object","properties":{"verification":{"const":"verified"}}},"review":{"type":"object","properties":{"reviewer":{"$ref":"#/$defs/text"},"reviewed_at":{"type":"string","format":"date-time"}}}}}}
+  ],
+  "$defs": {
+    "id":{"type":"string","minLength":1,"maxLength":128,"pattern":"^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "text":{"type":"string","minLength":1,"pattern":"\\S"},
+    "optionId":{"enum":["A","B","C","D"]},
+    "nullableText":{"anyOf":[{"$ref":"#/$defs/text"},{"type":"null"}]},
+    "nullableId":{"anyOf":[{"$ref":"#/$defs/id"},{"type":"null"}]},
+    "option":{"type":"object","additionalProperties":false,"required":["id","content","error_tag"],"properties":{"id":{"$ref":"#/$defs/optionId"},"content":{"$ref":"#/$defs/text"},"error_tag":{"enum":[null,"MISS_SCALE_FACTOR","SIGN_ERROR","WRONG_FREQUENCY_SCALE","MISSING_2PI","WRONG_HARMONIC_INDEX","CONFUSE_CT_DT","WRONG_SHIFT_DIRECTION","WRONG_MOD_N","FORGOT_MAGNITUDE_SQUARED","CONFUSE_ENERGY_POWER","TIME_INVARIANCE_ERROR","LINEARITY_ERROR","CAUSALITY_ERROR","MISSING_TIME_REVERSAL","WRONG_CONVOLUTION_INDEX","BOTH_SIGNALS_SHIFTED","OUTPUT_NOT_DIFFERENTIATED","INVALID_TIME_SCALING_FOR_LTI","IGNORED_CONJUGATE_SYMMETRY","MISS_FACTOR_2","MISSING_ABSOLUTE_VALUE","FORGOT_INTEGRATION","WRONG_PERIOD","WRONG_SUPPORT_INTERVAL","CONFUSE_CONVOLUTION_MULTIPLICATION","IGNORED_CONVERGENCE_CONDITION","WRONG_PARSEVAL_FACTOR","WRONG_FILTER_PASSBAND","WRONG_DELAY_FACTOR","WRONG_DC_COEFFICIENT","WRONG_COEFFICIENT_NORMALIZATION","WRONG_DIFFERENTIATION_FACTOR","WRONG_DUALITY_FACTOR","CONFUSE_IMPULSE_STEP","CONFUSE_ENVELOPE_PHASE","CONFUSE_MEMORY_CAUSALITY","CONFUSE_INVERTIBILITY_IDENTITY","WRONG_SAMPLING_VALUE"]}}},
+    "figure":{"type":"object","additionalProperties":false,"required":["id","asset_id","alt","placement"],"properties":{"id":{"$ref":"#/$defs/id"},"asset_id":{"$ref":"#/$defs/id"},"alt":{"$ref":"#/$defs/text"},"placement":{"enum":["stem","explanation","A","B","C","D"]}}},
+    "citation":{"type":"object","additionalProperties":false,"required":["source_id","location_text","pdf_page","printed_page","section","item","year","original_exam_code"],"properties":{"source_id":{"$ref":"#/$defs/id"},"location_text":{"$ref":"#/$defs/text"},"pdf_page":{"type":["integer","null"],"minimum":1},"printed_page":{"$ref":"#/$defs/nullableText"},"section":{"$ref":"#/$defs/nullableText"},"item":{"$ref":"#/$defs/nullableText"},"year":{"type":["integer","null"],"minimum":1900,"maximum":9999},"original_exam_code":{"$ref":"#/$defs/nullableText"}}},
+    "source":{"type":"object","additionalProperties":false,"required":["type","reference","parent_id","parent_knowledge_point","citations","verification"],"properties":{"type":{"enum":["TEXTBOOK_DEFINITION","TEXTBOOK_PROPERTY","TEXTBOOK_TRANSFORM_PAIR","TEXTBOOK_EXAMPLE","KEY_EXERCISE","TRUE_EXAM_ORIGINAL","TRUE_EXAM_MODEL","PERSONAL_MISTAKE","CONTROLLED_VARIANT"]},"reference":{"$ref":"#/$defs/text"},"parent_id":{"$ref":"#/$defs/nullableId"},"parent_knowledge_point":{"$ref":"#/$defs/nullableText"},"citations":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/citation"}},"verification":{"enum":["unverified","verified","conflict","needs_manual_check"]}},"allOf":[{"if":{"type":"object","properties":{"type":{"const":"CONTROLLED_VARIANT"}},"required":["type"]},"then":{"anyOf":[{"type":"object","properties":{"parent_id":{"$ref":"#/$defs/id"}}},{"type":"object","properties":{"parent_knowledge_point":{"$ref":"#/$defs/text"}}}]}}]},
+    "review":{"type":"object","additionalProperties":false,"required":["status","reviewer","reviewed_at","notes"],"properties":{"status":{"enum":["draft","reviewed","verified"]},"reviewer":{"$ref":"#/$defs/nullableText"},"reviewed_at":{"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}]},"notes":{"type":"string"}}}
+  }
+}

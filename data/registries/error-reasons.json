@@ -1,0 +1,6 @@
+{
+  "version":"1.0.0",
+  "items":[
+    {"id":"CONCEPT","label":"概念没理解"},{"id":"FORMULA_PAIR","label":"公式 / 变换对记混"},{"id":"CONDITION","label":"使用条件没注意"},{"id":"SIGN_COEFFICIENT","label":"符号 / 系数 / 频率变量错误"},{"id":"METHOD_ENTRY","label":"解题入口判断错误"},{"id":"STEP_ORDER","label":"步骤顺序错误"},{"id":"CALCULATION","label":"计算错误"},{"id":"READING_GRAPH","label":"审题 / 看图 / 变量看错"},{"id":"GUESS","label":"不会 / 猜的"}
+  ]
+}

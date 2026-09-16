@@ -1,0 +1,4720 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0089",
+    "revision": 1,
+    "family_id": "scut811-p1-q0089",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.2",
+    "blueprint_section": "3.2",
+    "knowledge_point_id": "kp-3.2",
+    "knowledge_point": "LTI对复指数响应",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "为什么复指数 \\(e^{st}\\) 对LTI系统特别重要？",
+    "options": [
+      {
+        "id": "A",
+        "content": "它是LTI系统的特征函数，输出只改变复幅度",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "它通过任何系统都保持不变",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "它只适用于非线性系统",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "它的频率总是0",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：若收敛，LTI系统对 \\(e^{st}\\) 的响应为 \\(H(s)e^{st}\\)。错项夸大为任意系统或误判频率。易错点：保持的是函数形状，不是幅度。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0090",
+    "revision": 1,
+    "family_id": "scut811-p1-q0090",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.2",
+    "blueprint_section": "3.2",
+    "knowledge_point_id": "kp-3.2",
+    "knowledge_point": "LTI对复指数响应",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "连续LTI系统输入 \\(e^{j\\omega_1t}\\) 时，稳态输出相位相对输入改变多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "一定不改变",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\angle H(j\\omega_1)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(|H(j\\omega_1)|\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\omega_1\\angle H(j\\omega_1)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：频率响应的相角给出该频率正弦分量的相移。错项把幅度响应当相移或多乘频率。易错点：幅度乘 \\(|H|\\)，相位加 \\(\\angle H\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0091",
+    "revision": 1,
+    "family_id": "scut811-p1-q0091",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.2",
+    "blueprint_section": "3.2",
+    "knowledge_point_id": "kp-3.2",
+    "knowledge_point": "LTI对复指数响应",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(h(t)\\) 为LTI系统冲激响应，则输入 \\(e^{j\\omega_0t}\\) 的输出系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(h(j\\omega_0)\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\int |h(\\tau)|^2d\\tau\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "\\(H(j\\omega_0)=\\int_{-\\infty}^{\\infty}h(\\tau)e^{-j\\omega_0\\tau}d\\tau\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(\\int h(\\tau)e^{j\\omega_0\\tau}d\\tau\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：把复指数代入卷积后可提出 \\(e^{j\\omega_0t}\\)，剩余积分就是频率响应。错项写反指数符号或混淆时域函数与能量。易错点：定义中的核为 \\(e^{-j\\omega t}\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0092",
+    "revision": 1,
+    "family_id": "scut811-p1-q0092",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.2",
+    "blueprint_section": "3.2",
+    "knowledge_point_id": "kp-3.2",
+    "knowledge_point": "LTI对复指数响应",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "输入是 \\(e^{j3t}\\)，学生把LTI输出写成 \\(H(j)e^{j3t}\\)。应如何改正？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(H(jt)e^{j3t}\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "B",
+        "content": "\\(H(j)e^{jt}\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "\\(H(3)e^{-j3t}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(H(j3)e^{j3t}\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：频率响应必须在输入角频率3处取值。错项漏频率、保留时间变量或改错符号。易错点：\\(H\\) 的自变量是频率，不是时间。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0093",
+    "revision": 1,
+    "family_id": "scut811-p1-q0093",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.2",
+    "blueprint_section": "3.2",
+    "knowledge_point_id": "kp-3.2",
+    "knowledge_point": "LTI对复指数响应",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生认为复指数通过LTI系统后频率会变成 \\(|H(j\\omega_0)|\\omega_0\\)。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "LTI系统不改变单个复指数的频率，只改变复幅度",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "频率应变成 \\(\\omega_0+\\angle H\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "频率应变成 \\(-\\omega_0\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "只有非因果系统才保持频率",
+        "error_tag": "CAUSALITY_ERROR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：特征函数性质保留 \\(e^{j\\omega_0t}\\) 的频率。错项把增益或相位加到频率上。易错点：输出频率仍为 \\(\\omega_0\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0094",
+    "revision": 1,
+    "family_id": "scut811-p1-q0094",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "连续时间周期信号的CTFS系数 \\(a_0\\) 表示什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "最高次谐波幅度",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "一个周期内的平均值（直流分量）",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "基波角频率",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "D",
+        "content": "信号总能量",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：令 \\(k=0\\) 时指数核为1，\\(a_0=(1/T_0)\\int_{T_0}x(t)dt\\)。错项混淆频率、能量和最高谐波。易错点：直流项不是基波项。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0095",
+    "revision": 1,
+    "family_id": "scut811-p1-q0095",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "指数型CTFS分析公式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k=\\frac1{2\\pi}\\int x(t)e^{-j\\omega t}dt\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_k=\\frac1{T_0}\\int_{T_0}|x(t)|^2dt\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_k=\\frac1{T_0}\\int_{T_0}x(t)e^{-jk\\omega_0t}dt\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(a_k=\\int_{T_0}x(t)e^{jk\\omega_0t}dt\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：CTFS系数在任一完整周期上积分，并带 \\(1/T_0\\) 和负指数核。错项漏归一化、写反符号或混入能量。易错点：积分区间长度必须恰为一个周期。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0096",
+    "revision": 1,
+    "family_id": "scut811-p1-q0096",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)=A\\cos(k_0\\omega_0t+\\phi)\\)，正频率系数 \\(a_{k_0}\\) 是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(Ae^{j\\phi}\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\frac A2e^{-j\\phi}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\frac A2e^{jk_0\\phi}\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\frac A2e^{j\\phi}\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：欧拉展开的正频率项系数为 \\((A/2)e^{j\\phi}\\)。错项漏二分之一、相位符号错或多乘谐波下标。易错点：负频率系数才是 \\((A/2)e^{-j\\phi}\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0097",
+    "revision": 1,
+    "family_id": "scut811-p1-q0097",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期矩形脉冲每周期在 \\(|t|<T_1\\) 为1，周期为 \\(T_0\\)。其直流系数是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_0=2T_1/T_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(a_0=T_1/T_0\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_0=T_0/(2T_1)\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_0=2T_1\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：直流系数等于占空比，脉冲宽度为 \\(2T_1\\)。错项漏掉两侧宽度、取倒数或漏周期归一化。易错点：先确认区间是 \\(-T_1\\) 到 \\(T_1\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0098",
+    "revision": 1,
+    "family_id": "scut811-p1-q0098",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若周期信号只含 \\(a_{-2}=a_2=1/2\\)，其他系数为0，则时域信号是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(j\\sin(2\\omega_0t)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\cos(2\\omega_0t)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\cos(2\\omega_0t)\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\cos(\\omega_0t)\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：一对各为1/2的共轭对合成为余弦。错项漏系数、用错谐波下标或错配正弦。易错点：正负频率两项要一起合并。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0099",
+    "revision": 1,
+    "family_id": "scut811-p1-q0099",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "在周期 \\(T_0\\) 的CTFS中，常数信号 \\(x(t)=C\\) 对应哪组系数？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_1=C\\)，其余为0",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_0=C/T_0\\)，其余为0",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_0=C\\)，其余 \\(a_k=0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "所有 \\(a_k=C\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：常数只有直流分量。错项把常数分配到所有谐波、基波或重复归一化。易错点：综合式中的 \\(a_0\\) 就是常数值。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0100",
+    "revision": 1,
+    "family_id": "scut811-p1-q0100",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(x(t)=\\sin(2\\omega_0t)\\) 的非零CTFS系数是哪组？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_2=a_{-2}=1/2\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_1=1/(2j),\\ a_{-1}=-1/(2j)\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_2=a_{-2}=1/(2j)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_2=1/(2j),\\ a_{-2}=-1/(2j)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：\\(\\sin\\theta=(e^{j\\theta}-e^{-j\\theta})/(2j)\\)。错项错配余弦、谐波下标或负频率符号。易错点：实奇信号的系数为纯虚且共轭反对称。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0101",
+    "revision": 1,
+    "family_id": "scut811-p1-q0101",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "CTFS系数仅有 \\(a_1=-j/2\\)、\\(a_{-1}=j/2\\) 时，对应哪一信号？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\sin(\\omega_0t)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\cos(\\omega_0t)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "\\(-\\sin(\\omega_0t)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\sin(2\\omega_0t)\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：正频率系数为 \\(1/(2j)=-j/2\\)，负频率系数为其相反。错项混淆正余弦、整体符号或谐波序号。易错点：先记正弦的正频率系数为负虚数。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0102",
+    "revision": 1,
+    "family_id": "scut811-p1-q0102",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生把CTFS综合式写成 \\(x(t)=\\sum_ka_ke^{jkf_0t}\\)。漏掉了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "综合式还要乘 \\(1/T_0\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "B",
+        "content": "角频率应为 \\(\\omega_0=2\\pi f_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "指数中应去掉 \\(j\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "谐波下标 \\(k\\) 应放在系数分母",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：若使用普通频率 \\(f_0\\)，指数应写 \\(e^{j2\\pi kf_0t}\\)。错项改变复指数结构或重复归一化。易错点：分清Hz与rad/s。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0103",
+    "revision": 1,
+    "family_id": "scut811-p1-q0103",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对实信号，学生只保留CTFS正频率系数并丢掉负频率项。会导致什么问题？",
+    "options": [
+      {
+        "id": "A",
+        "content": "只会改变周期，不改变实值性",
+        "error_tag": "WRONG_PERIOD"
+      },
+      {
+        "id": "B",
+        "content": "完全没有影响",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "一般无法保持时域信号为实数",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "只会改变直流分量",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：实信号需要 \\(a_{-k}=a_k^*\\) 的共轭成对结构。错项忽略负频率对实值性的作用。易错点：单个非零复指数通常对应复信号。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0104",
+    "revision": 1,
+    "family_id": "scut811-p1-q0104",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.3",
+    "blueprint_section": "3.3",
+    "knowledge_point_id": "kp-3.3",
+    "knowledge_point": "CTFS表示与系数",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "求 \\(a_k\\) 时学生在两个周期长度的区间积分，却仍除以 \\(T_0\\)。结果会怎样？",
+    "options": [
+      {
+        "id": "A",
+        "content": "所有系数缩小2倍",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "只有 \\(a_0\\) 改变",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "C",
+        "content": "结果完全不变",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "所有系数被放大2倍",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：周期函数在两个周期上的积分是单周期的2倍，归一化若仍用 \\(T_0\\) 就整体翻倍。错项写反比例或只关注直流。易错点：积分长度和归一化长度必须匹配。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.3（谐波组合的基本频率及CTFS系数）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.3",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.3",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0105",
+    "revision": 1,
+    "family_id": "scut811-p1-q0105",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.4",
+    "blueprint_section": "3.4",
+    "knowledge_point_id": "kp-3.4",
+    "knowledge_point": "傅里叶级数收敛",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "在狄利克雷条件下，傅里叶级数在信号连续点收敛到什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "信号在该点的值",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "左右极限的差",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "C",
+        "content": "恒为0",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "D",
+        "content": "信号在该点的导数",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：连续点的左右极限相同，级数收敛到该共同值。错项混淆跳变点结论或导数。易错点：跳变点才取左右极限平均。",
+    "source": {
+      "type": "TEXTBOOK_DEFINITION",
+      "reference": "基于奥本海姆第二版第3.4节 傅里叶级数的收敛的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第3.4节 傅里叶级数的收敛",
+          "pdf_page": 146,
+          "printed_page": "123",
+          "section": "第3.4节 傅里叶级数的收敛",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0106",
+    "revision": 1,
+    "family_id": "scut811-p1-q0106",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.4",
+    "blueprint_section": "3.4",
+    "knowledge_point_id": "kp-3.4",
+    "knowledge_point": "傅里叶级数收敛",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期信号在跳变点 \\(t_0\\) 的傅里叶级数收敛到哪里？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(t_0^+)-x(t_0^-)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\([x(t_0^-)+x(t_0^+)]/2\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(x(t_0^-)\\)",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(t_0^+)\\)",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：狄利克雷意义下在有限跳变处收敛到左右极限平均。错项任选一侧或取跳变量。易错点：这不代表原函数必须在跳变点定义为该平均值。",
+    "source": {
+      "type": "TEXTBOOK_DEFINITION",
+      "reference": "基于奥本海姆第二版第3.4节 傅里叶级数的收敛的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第3.4节 傅里叶级数的收敛",
+          "pdf_page": 146,
+          "printed_page": "123",
+          "section": "第3.4节 傅里叶级数的收敛",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0107",
+    "revision": 1,
+    "family_id": "scut811-p1-q0107",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.4",
+    "blueprint_section": "3.4",
+    "knowledge_point_id": "kp-3.4",
+    "knowledge_point": "傅里叶级数收敛",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生说“只要存在跳变，傅里叶级数就不收敛”。正确修正是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "跳变点收敛到右极限",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "B",
+        "content": "只有连续信号才能有傅里叶级数",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "C",
+        "content": "有限跳变允许收敛，跳变点收敛到左右极限平均",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "跳变点收敛到左极限",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：分段连续且每周期有限个极值和跳变通常满足狄利克雷条件。错项把充分条件过度收紧。易错点：吉布斯现象不等于级数不收敛。",
+    "source": {
+      "type": "TEXTBOOK_DEFINITION",
+      "reference": "基于奥本海姆第二版第3.4节 傅里叶级数的收敛的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第3.4节 傅里叶级数的收敛",
+          "pdf_page": 146,
+          "printed_page": "123",
+          "section": "第3.4节 傅里叶级数的收敛",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0108",
+    "revision": 1,
+    "family_id": "scut811-p1-q0108",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.4",
+    "blueprint_section": "3.4",
+    "knowledge_point_id": "kp-3.4",
+    "knowledge_point": "傅里叶级数收敛",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "增加傅里叶级数项数后，跳变附近的吉布斯过冲会怎样？",
+    "options": [
+      {
+        "id": "A",
+        "content": "峰值和宽度都立即变为0",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "B",
+        "content": "过冲区域变宽且峰值无限增大",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "C",
+        "content": "只要项数为偶数就完全消失",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "D",
+        "content": "过冲区域变窄，但峰值相对跳变量不会趋于0",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：增加谐波使振荡集中到更窄区域，但最大相对过冲保留。错项误认为有限截断能消除不连续影响。易错点：点态收敛与邻域内一致逼近不同。",
+    "source": {
+      "type": "TEXTBOOK_DEFINITION",
+      "reference": "基于奥本海姆第二版第3.4节 傅里叶级数的收敛的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第3.4节 傅里叶级数的收敛",
+          "pdf_page": 146,
+          "printed_page": "123",
+          "section": "第3.4节 傅里叶级数的收敛",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0109",
+    "revision": 1,
+    "family_id": "scut811-p1-q0109",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "实偶周期信号的CTFS系数具有什么典型性质？",
+    "options": [
+      {
+        "id": "A",
+        "content": "系数为实数且关于 \\(k\\) 偶对称",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "系数为纯虚且奇对称",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "只有正下标系数非零",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "系数一定都相等",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：实性给出共轭对称，偶性再使系数满足 \\(a_{-k}=a_k\\)，两者合成实偶。错项对应实奇或单边频谱误解。易错点：同时使用两条对称性质。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.5（CTFS线性、时移、反转）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.5",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0110",
+    "revision": 1,
+    "family_id": "scut811-p1-q0110",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则 \\(x(t-t_0)\\) 的CTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k e^{-j\\omega_0t_0}\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_ke^{-jk\\omega_0t_0}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(a_ke^{jk\\omega_0t_0}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{k-t_0}\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：第k次谐波延迟后产生相位 \\(-k\\omega_0t_0\\)。错项写反符号、移动离散下标或漏k。易错点：每个谐波的相移随k成比例。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.5（CTFS线性、时移、反转）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.5",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0111",
+    "revision": 1,
+    "family_id": "scut811-p1-q0111",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则 \\(dx(t)/dt\\) 的CTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k/(jk\\omega_0)\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(-jk\\omega_0a_k\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(jk\\omega_0a_k\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(j\\omega_0a_k\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：每一项 \\(e^{jk\\omega_0t}\\) 微分产生 \\(jk\\omega_0\\)。错项漏k、写成积分或符号错误。易错点：直流项k=0微分后消失。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.8（实奇信号、有限谐波与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.8",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0112",
+    "revision": 1,
+    "family_id": "scut811-p1-q0112",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "CTFS的Parseval关系正确的是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\int_{T_0}|x(t)|^2dt=\\sum|a_k|^2\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\frac1{T_0}\\int x(t)dt=\\sum a_k\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\frac1{2\\pi}\\int|x(t)|^2dt=\\sum|a_k|\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\frac1{T_0}\\int_{T_0}|x(t)|^2dt=\\sum_{k=-\\infty}^{\\infty}|a_k|^2\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：周期平均功率等于所有CTFS系数模平方之和。错项漏周期归一化、漏模平方或套用错误常数。易错点：左边是一个周期的平均功率。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.26（由CTFS系数判定实性、奇偶性与导数性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.26",
+          "pdf_page": 186,
+          "printed_page": "163",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0113",
+    "revision": 1,
+    "family_id": "scut811-p1-q0113",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则时间反转 \\(x(-t)\\) 的系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_{-k}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(-a_k\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_k^*\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{k-1}\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：将 \\(t\\) 换为 \\(-t\\) 会把指数谐波下标k换成-k。错项把反转误作取负、共轭或移位。易错点：只有对实信号才可进一步把 \\(a_{-k}\\) 写成 \\(a_k^*\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.40（时移、实部、偶部、微分及尺度的组合）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.40",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.40",
+          "pdf_page": 189,
+          "printed_page": "166",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.40",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0114",
+    "revision": 1,
+    "family_id": "scut811-p1-q0114",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则其共轭信号 \\(x^*(t)\\) 的CTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(-a_k^*\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_{-k}^*\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(a_k^*\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{-k}\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：对综合式取共轭会同时共轭系数并反转指数符号，整理后得到 \\(a_{-k}^*\\)。错项只完成一半操作。易错点：共轭会使 \\(j\\) 变号。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.41（系数周期关系及偶对称约束下恢复周期信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.41",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.41",
+          "pdf_page": 189,
+          "printed_page": "166",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.41",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0115",
+    "revision": 1,
+    "family_id": "scut811-p1-q0115",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，其偶部 \\(x_e(t)\\) 对应哪组系数？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k+a_{-k}\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_k^*/2\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "\\((a_k+a_{-k})/2\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\((a_k-a_{-k})/2\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：偶部是 \\([x(t)+x(-t)]/2\\)，线性及反转性质给出系数平均。错项写成奇部、漏二分之一或只取共轭。易错点：先在时域写偶部定义。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.5（CTFS线性、时移、反转）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.5",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0116",
+    "revision": 1,
+    "family_id": "scut811-p1-q0116",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则 \\(x(t)e^{jm\\omega_0t}\\) 的CTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_{k+m}\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "\\(e^{jm\\omega_0}a_k\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "\\(ma_k\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{k-m}\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：乘以第m次复指数把每个谐波上移m格，因此新第k格来自原第k-m格。错项写反下标方向或把调制当常数。易错点：用一个单一谐波代入可检查方向。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.8（实奇信号、有限谐波与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.8",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0117",
+    "revision": 1,
+    "family_id": "scut811-p1-q0117",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow a_k\\)，则 \\(x(t)+x(-t)\\) 的CTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k+a_{-k}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(a_k-a_{-k}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\((a_k+a_{-k})/2\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(2a_k\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：线性与时间反转性质直接相加。错项写成差、误当偶部或假设原信号已偶对称。易错点：题目没有除以2，所以不是偶部本身。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.26（由CTFS系数判定实性、奇偶性与导数性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.26",
+          "pdf_page": 186,
+          "printed_page": "163",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0118",
+    "revision": 1,
+    "family_id": "scut811-p1-q0118",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生把 \\(x(t-t_0)\\) 的CTFS系数写成 \\(a_ke^{-j\\omega_0t_0}\\)。漏掉了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "复共轭符号",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "谐波下标 \\(k\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "绝对值符号 \\(|t_0|\\)",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      },
+      {
+        "id": "D",
+        "content": "周期归一化 \\(1/T_0\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：第k次谐波的角频率是 \\(k\\omega_0\\)，相移必须随k变化。错项加入无关因素。易错点：统一相位因子不能表示普通时移。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.5（CTFS线性、时移、反转）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.5",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.5",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0119",
+    "revision": 1,
+    "family_id": "scut811-p1-q0119",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "实奇周期信号的CTFS系数被写成“实偶序列”。正确性质是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "纯虚且偶对称",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "只有 \\(a_0\\) 非零",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "C",
+        "content": "纯虚且关于 \\(k\\) 奇对称",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "实且奇对称",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：实性与奇性结合使系数为纯虚并满足 \\(a_{-k}=-a_k\\)。错项只使用了一半对称条件。易错点：实奇信号的直流系数为0。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.8（实奇信号、有限谐波与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.8",
+          "pdf_page": 183,
+          "printed_page": "160",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0120",
+    "revision": 1,
+    "family_id": "scut811-p1-q0120",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "计算周期信号平均功率时，学生写成 \\(\\sum_ka_k^2\\)。主要问题是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "还应对k再积分",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "应求 \\(\\sum_k|a_k|\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "只保留 \\(a_0^2\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "D",
+        "content": "应求 \\(\\sum_k|a_k|^2\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：复系数能量贡献由模平方给出。错项漏共轭、只取模或只取直流。易错点：即使时域信号实，CTFS系数也可能是复数。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.26（由CTFS系数判定实性、奇偶性与导数性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.26",
+          "pdf_page": 186,
+          "printed_page": "163",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.26",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0121",
+    "revision": 1,
+    "family_id": "scut811-p1-q0121",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生由 \\(x(t)\\leftrightarrow a_k\\) 推出 \\(x(-t)\\leftrightarrow a_k^*\\)。该式何时才可成立？",
+    "options": [
+      {
+        "id": "A",
+        "content": "当 \\(x(t)\\) 为实信号时，因为此时 \\(a_{-k}=a_k^*\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "对任意复信号都成立",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "仅当信号为奇信号",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "仅当 \\(a_0=0\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：一般反转对应 \\(a_{-k}\\)，实性才允许写成 \\(a_k^*\\)。错项把附加条件省略或换成无关条件。易错点：先写一般性质，再使用实信号约束。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.40（时移、实部、偶部、微分及尺度的组合）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.40",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.40",
+          "pdf_page": 189,
+          "printed_page": "166",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.40",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0122",
+    "revision": 1,
+    "family_id": "scut811-p1-q0122",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.5",
+    "blueprint_section": "3.5",
+    "knowledge_point_id": "kp-3.5",
+    "knowledge_point": "CTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对 \\(dx/dt\\) 的CTFS系数，学生写成 \\(k\\omega_0a_k\\)。漏掉了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "共轭符号",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "因子 \\(j\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "因子 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "绝对值 \\(|k|\\)",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：复指数微分产生 \\(jk\\omega_0\\)。错项遗漏虚数单位或加入无关因素。易错点：微分会使相位领先 \\(\\pi/2\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.41（系数周期关系及偶对称约束下恢复周期信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.41",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.41",
+          "pdf_page": 189,
+          "printed_page": "166",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.41",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0123",
+    "revision": 1,
+    "family_id": "scut811-p1-q0123",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期为 \\(N\\) 的离散序列，其DTFS系数有多少个独立值？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(N-1\\) 个",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "B",
+        "content": "\\(2N\\) 个",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "C",
+        "content": "\\(N\\) 个",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "无限多个且都独立",
+        "error_tag": "WRONG_MOD_N"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：系数序列以N为周期，因此任意连续N个系数决定全部系数。错项忽略模N周期或端点计数。易错点：综合求和通常只取一组N个连续下标。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.10（DTFS系数周期性与共轭对称）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.10",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0124",
+    "revision": 1,
+    "family_id": "scut811-p1-q0124",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "DTFS综合式中 \\(e^{j(2\\pi/N)kn}\\) 的下标 \\(k\\) 增加N后会怎样？",
+    "options": [
+      {
+        "id": "A",
+        "content": "基函数变号",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "B",
+        "content": "频率增加 \\(2\\pi N\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "基函数变为0",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "D",
+        "content": "基函数不变",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：多出的因子为 \\(e^{j2\\pi n}=1\\)。错项忽略整数n带来的周期等价。易错点：这正是系数按N周期的原因。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.11（DTFS实偶性质与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.11",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0125",
+    "revision": 1,
+    "family_id": "scut811-p1-q0125",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期为 \\(N\\) 的序列DTFS分析公式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_k=\\frac1N\\sum_{n=0}^{N-1}x[n]e^{-j(2\\pi/N)kn}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(a_k=\\sum_{n=0}^{N-1}x[n]e^{j(2\\pi/N)kn}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_k=\\frac1{2\\pi}\\int x(t)e^{-jk\\omega_0t}dt\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_k=\\frac1N\\sum|x[n]|^2\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：在任一N点周期上求和，带 \\(1/N\\) 和负指数核。错项漏归一化、写反符号或混用连续形式。易错点：分析式有 \\(1/N\\)，综合式没有。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.10（DTFS系数周期性与共轭对称）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.10",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0126",
+    "revision": 1,
+    "family_id": "scut811-p1-q0126",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期为 \\(N\\) 的序列DTFS综合式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x[n]=\\int a_ke^{jkn}dk\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "\\(x[n]=\\sum_{k=0}^{N-1}a_ke^{j(2\\pi/N)kn}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(x[n]=\\frac1N\\sum_{k=0}^{N-1}a_ke^{j(2\\pi/N)kn}\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "\\(x[n]=\\sum a_ke^{-j(2\\pi/N)kn}\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：采用当前系数定义时，综合式对一组N个系数求和且没有额外 \\(1/N\\)。错项重复归一化、写反符号或改成积分。易错点：不要把DFT的其他归一化约定混入。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.11（DTFS实偶性质与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.11",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0127",
+    "revision": 1,
+    "family_id": "scut811-p1-q0127",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期N序列 \\(x[n]=1\\) 的DTFS系数是哪一组？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_1=1\\)，其余为0",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_0=1/N\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_0=1\\)，其余独立系数为0",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "所有 \\(a_k=1\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：常数序列只有直流分量。错项把常数分散到所有频率、错放到基波或重复除N。易错点：综合式中的直流系数直接等于常数。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.10（DTFS系数周期性与共轭对称）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.10",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0128",
+    "revision": 1,
+    "family_id": "scut811-p1-q0128",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期N序列 \\(x[n]=e^{j(2\\pi/N)mn}\\) 的DTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "当 \\(k=m\\) 时 \\(a_k=1/N\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "B",
+        "content": "当 \\(k\\equiv-m\\pmod N\\) 时为1",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "所有 \\(a_k=e^{j2\\pi m/N}\\)",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "D",
+        "content": "当 \\(k\\equiv m\\pmod N\\) 时 \\(a_k=1\\)，其余为0",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：输入本身就是第m个DTFS基函数，系数按N周期重复。错项多除N、写反下标或忽略正交性。易错点：下标判断要按模N。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.11（DTFS实偶性质与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.11",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0129",
+    "revision": 1,
+    "family_id": "scut811-p1-q0129",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期N冲激列在每周期仅 \\(n=0\\) 处为1，其DTFS系数是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "对所有 \\(k\\)，\\(a_k=1/N\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "仅 \\(a_0=1\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "C",
+        "content": "对所有 \\(k\\)，\\(a_k=1\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "对所有 \\(k\\)，\\(a_k=N\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：分析和每周期只有一个非零样本，除以N后每个k都为1/N。错项把时域冲激误作频域冲激或漏归一化。易错点：时域越集中，DTFS系数越均匀。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.10（DTFS系数周期性与共轭对称）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.10",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0130",
+    "revision": 1,
+    "family_id": "scut811-p1-q0130",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对周期为 \\(N\\) 的实余弦 \\(\\cos(2\\pi mn/N)\\)，且 \\(m\\not\\equiv -m\\pmod N\\)（即 \\(m\\neq0\\)，并且当 \\(N\\) 为偶数时 \\(m\\neq N/2\\)），非零DTFS系数是哪组？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_m=-a_{-m}=1/2\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_m=a_{-m}=1/2\\)（下标按N取模）",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(a_m=1\\)，其余为0",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_m=a_{N-m}=1\\)",
+        "error_tag": "MISS_FACTOR_2"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：余弦分成正负两个复指数，每个系数1/2，负下标按N等价。错项漏二分之一或误作正弦符号结构。易错点：\\(-m\\) 与 \\(N-m\\) 是同一系数格。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.11（DTFS实偶性质与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.11",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0131",
+    "revision": 1,
+    "family_id": "scut811-p1-q0131",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生把DTFS分析式前的 \\(1/N\\) 写成 \\(1/T_0\\)。问题是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "DTFS不需要任何归一化",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "B",
+        "content": "应写成 \\(1/N^2\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "C",
+        "content": "混淆离散周期点数N与连续时间周期",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "只需再乘 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：DTFS在一个周期的N个样本上求和，归一化因子是1/N。错项套用CTFS或错误取消归一化。易错点：连续积分用T，离散求和用N。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.10（DTFS系数周期性与共轭对称）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.10",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0132",
+    "revision": 1,
+    "family_id": "scut811-p1-q0132",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.6",
+    "blueprint_section": "3.6",
+    "knowledge_point_id": "kp-3.6",
+    "knowledge_point": "DTFS表示",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期N序列的系数 \\(a_{N+2}\\) 被当作一个全新的独立系数。正确处理是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_{N+2}=0\\)",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_{N+2}=a_{-2}\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_{N+2}=Na_2\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{N+2}=a_2\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：DTFS系数以N为周期。错项把超出基本区间当零、写反下标或错误缩放。易错点：所有系数下标先按N化简。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.11（DTFS实偶性质与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.11",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0133",
+    "revision": 1,
+    "family_id": "scut811-p1-q0133",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.7",
+    "blueprint_section": "3.7",
+    "knowledge_point_id": "kp-3.7",
+    "knowledge_point": "DTFS性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期N序列的DTFS Parseval关系是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\frac1N\\sum_{n=0}^{N-1}|x[n]|^2=\\sum_{k=0}^{N-1}|a_k|^2\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\sum|x[n]|^2=\\sum|a_k|^2\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\frac1N\\sum x[n]=\\sum a_k\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\sum|x[n]|^2=\\frac1{N^2}\\sum|a_k|^2\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：采用分析式含1/N、综合式不含归一化时，时域平均功率等于系数模平方和。错项漏模平方或使用错误N因子。易错点：先确认项目采用的DTFS归一化约定。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.50（DTFS系数下标关系与序列约束）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.50",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.50",
+          "pdf_page": 192,
+          "printed_page": "169",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.50",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0134",
+    "revision": 1,
+    "family_id": "scut811-p1-q0134",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.7",
+    "blueprint_section": "3.7",
+    "knowledge_point_id": "kp-3.7",
+    "knowledge_point": "DTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "实周期序列满足 \\(a_2=1+j\\)。学生写 \\(a_{-2}=1+j\\)。正确值是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(0\\)",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "B",
+        "content": "\\(1-j\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(-1-j\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(-1+j\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：实序列系数满足 \\(a_{-k}=a_k^*\\)，所以只改变虚部符号。错项整体取负、共轭错误或当成不存在。易错点：共轭不是相反数。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.50（DTFS系数下标关系与序列约束）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.50",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.50",
+          "pdf_page": 192,
+          "printed_page": "169",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.50",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0135",
+    "revision": 1,
+    "family_id": "scut811-p1-q0135",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.7",
+    "blueprint_section": "3.7",
+    "knowledge_point_id": "kp-3.7",
+    "knowledge_point": "DTFS性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期 \\(N=8\\) 时，学生认为 \\(a_{-1}\\) 与基本区间内任何系数都无关。正确等价下标是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a_{-1}=a_8\\)",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "B",
+        "content": "\\(a_{-1}=0\\)",
+        "error_tag": "WRONG_MOD_N"
+      },
+      {
+        "id": "C",
+        "content": "\\(a_{-1}=a_7\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(a_{-1}=a_1\\)",
+        "error_tag": "WRONG_MOD_N"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：\\(-1\\equiv7\\pmod8\\)。错项忽略模N或把边界8误作-1。易错点：基本区间0到N-1中，负一下标对应N-1。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.51（DTFS时移、周期门控与系数关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.51",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.51",
+          "pdf_page": 192,
+          "printed_page": "169",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.51",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0136",
+    "revision": 1,
+    "family_id": "scut811-p1-q0136",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期信号通过LTI系统后仍以相同基本周期表示的关键原因是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "系统把所有谐波变成直流",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "LTI系统会把频率统一缩放",
+        "error_tag": "INVALID_TIME_SCALING_FOR_LTI"
+      },
+      {
+        "id": "C",
+        "content": "只有非因果系统才能保持周期",
+        "error_tag": "CAUSALITY_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "每个谐波分别乘以对应频率响应，不产生新频率",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：复指数特征函数性质使每个输入谐波保留原频率。错项错误引入新频率或因果条件。易错点：某些谐波可被抑制，但不会凭空产生非线性谐波。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0137",
+    "revision": 1,
+    "family_id": "scut811-p1-q0137",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "已知周期输入的CTFS系数 \\(a_2=3\\)，LTI系统在二次谐波处满足 \\(H(j2\\omega_0)=-j\\)，输出系数 \\(b_2\\) 是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(-3j\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(3j\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(-j\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(-6j\\)",
+        "error_tag": "MISS_FACTOR_2"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：\\(b_2=a_2H(j2\\omega_0)=3(-j)=-3j\\)。错项分别写反符号、漏乘输入系数或多乘2。易错点：第 \\(k\\) 次谐波应在 \\(k\\omega_0\\) 处取系统响应。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0138",
+    "revision": 1,
+    "family_id": "scut811-p1-q0138",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "输入 \\(x(t)=A\\cos(\\omega_1t+\\phi)\\) 通过LTI系统，输出稳态幅度是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(A|H(j\\omega_0)|\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "\\(A|H(j\\omega_1)|\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(A\\angle H(j\\omega_1)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "\\(|A+H(j\\omega_1)|\\)",
+        "error_tag": "LINEARITY_ERROR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：正弦稳态幅度乘频率响应模值。错项把相角当增益、做加法或在错误频率取值。易错点：相位另加 \\(\\angle H(j\\omega_1)\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0139",
+    "revision": 1,
+    "family_id": "scut811-p1-q0139",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若输入CTFS只有 \\(a_{\\pm1}=1/2\\)，系统满足 \\(H(\\pm j\\omega_0)=0\\)，输出是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(y(t)=1\\)",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "B",
+        "content": "\\(y(t)=\\sin\\omega_0t\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(y(t)=0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(y(t)=\\cos\\omega_0t\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：输入仅有的两个谐波都落在系统零点上，因此输出系数全为0。错项忽略滤波作用或凭空产生直流/正弦。易错点：先列非零输入谐波，再逐个乘H。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0140",
+    "revision": 1,
+    "family_id": "scut811-p1-q0140",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "输入含直流和二次谐波，\\(a_0=2,a_{\\pm2}=1\\)。若系统只通过直流，输出是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(y(t)=2\\cos(2\\omega_0t)\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "B",
+        "content": "\\(y(t)=H(j2\\omega_0)\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "\\(y(t)=2\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(y(t)=2H(0)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：只有k=0项保留，输出直流系数是 \\(a_0H(0)\\)。错项保留被阻断谐波、取错频率或默认直流增益为1。易错点：直流对应 \\(H(0)\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0141",
+    "revision": 1,
+    "family_id": "scut811-p1-q0141",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生计算第3次谐波输出时使用 \\(H(j\\omega_0)\\)。应改用什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(H(j3\\omega_0)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(H(j\\omega_0/3)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "\\(H(j3)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "\\(3H(j\\omega_0)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：第3次谐波角频率为 \\(3\\omega_0\\)。错项做反向缩放、漏单位或把频率缩放当增益。易错点：谐波序号进入H的自变量。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0142",
+    "revision": 1,
+    "family_id": "scut811-p1-q0142",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "理想低通截止频率 \\(1.5\\omega_0\\)，输入含k=0、±1、±2谐波。哪些能通过？",
+    "options": [
+      {
+        "id": "A",
+        "content": "只有 \\(k=0\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "B",
+        "content": "\\(k=0,\\pm1\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "只有 \\(k=\\pm2\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "D",
+        "content": "全部通过",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：通过条件为 \\(|k\\omega_0|\\le1.5\\omega_0\\)，所以只有0和±1。错项误判通带边界或谐波频率。易错点：比较的是 \\(|k\\omega_0|\\)，不是k与截止频率直接比较。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0143",
+    "revision": 1,
+    "family_id": "scut811-p1-q0143",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.8",
+    "blueprint_section": "3.8",
+    "knowledge_point_id": "kp-3.8",
+    "knowledge_point": "FS与LTI系统",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "实周期输入通过实LTI系统后，学生只计算正k输出系数。还必须做什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把所有系数乘2",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "负k系数一律为0",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "用共轭对称补出负k系数",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "把正k系数全部取负",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：实输出要求 \\(b_{-k}=b_k^*\\)，负频率项不能丢。错项错误取负、翻倍或置零。易错点：若系统冲激响应实，H也具有相应共轭对称。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.13（周期输入经LTI系统的谐波响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.13",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.13",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0144",
+    "revision": 1,
+    "family_id": "scut811-p1-q0144",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.9",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "理想连续时间低通滤波器的基本频率响应可写成哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(H=0\\) 当 \\(|\\omega|\\le\\omega_c\\)，否则为1",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "B",
+        "content": "\\(H=1\\) 当 \\(t\\le\\omega_c\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "\\(H=j\\omega\\) 对所有频率",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "D",
+        "content": "\\(H(j\\omega)=1\\) 当 \\(|\\omega|\\le\\omega_c\\)，否则为0",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：理想低通在截止频率以内单位通过、以外完全阻断。错项交换通阻带或混淆时间变量。易错点：通带条件使用 \\(|\\omega|\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0145",
+    "revision": 1,
+    "family_id": "scut811-p1-q0145",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.9",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "高通滤波器截止频率为 \\(2\\omega_0\\)。输入仅含k=1和k=3谐波，哪项正确？",
+    "options": [
+      {
+        "id": "A",
+        "content": "k=3通过，k=1被抑制",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "k=1通过，k=3被抑制",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "C",
+        "content": "两者都通过",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "D",
+        "content": "两者都被抑制",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：高通保留绝对频率高于截止的分量，\\(3\\omega_0\\) 在通带，\\(\\omega_0\\) 不在。错项交换通阻带或忽略频率。易错点：高通判断也要看绝对频率。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0146",
+    "revision": 1,
+    "family_id": "scut811-p1-q0146",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.10",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "RC低通系统 \\(y^{\\prime}(t)+ay(t)=ax(t)\\) 的直流增益是多少（\\(a>0\\)）？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(H(0)=1/a\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(H(0)=1\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(H(0)=0\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "D",
+        "content": "\\(H(0)=a\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：\\(H(j\\omega)=a/(j\\omega+a)\\)，代入0得1。错项忽略分子或只取单个系数。易错点：低通在直流处应通过。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.35（理想高通与可通过的谐波）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.35",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.35",
+          "pdf_page": 188,
+          "printed_page": "165",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.35",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0147",
+    "revision": 1,
+    "family_id": "scut811-p1-q0147",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.10",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "系统 \\(y^{\\prime}(t)+ay(t)=x^{\\prime}(t)\\)（\\(a>0\\)）被称作低通。正确辨析是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "它对所有频率增益都为1",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "B",
+        "content": "它不是LTI系统",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "它在直流处增益为0，更符合高通特征",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "只要含一阶微分就是低通",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：\\(H=j\\omega/(j\\omega+a)\\)，直流被阻断，高频趋近1。错项只看方程阶数或误判线性。易错点：判断滤波类型优先看 \\(H(0)\\) 与高频极限。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0148",
+    "revision": 1,
+    "family_id": "scut811-p1-q0148",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.11",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "离散滤波器 \\(y[n]=x[n]+x[n-1]\\) 对 \\(\\Omega=\\pi\\) 的增益是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\)",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "B",
+        "content": "\\(1\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(-2\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(H(e^{j\\pi})=0\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：\\(H=1+e^{-j\\Omega}\\)，在 \\(\\Omega=\\pi\\) 时两项抵消。错项忽略相位或只做幅度相加。易错点：延迟项在不同频率可能相长或相消。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.35（理想高通与可通过的谐波）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.35",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.35",
+          "pdf_page": 188,
+          "printed_page": "165",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.35",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0149",
+    "revision": 1,
+    "family_id": "scut811-p1-q0149",
+    "variant_role": "base",
+    "chapter": 3,
+    "section": "3.11",
+    "blueprint_section": "3.9-3.11",
+    "knowledge_point_id": "kp-3.9-3.11",
+    "knowledge_point": "滤波与方程描述滤波器",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "离散滤波器 \\(y[n]=x[n]-x[n-1]\\) 对直流输入的输出是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "0",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "等于输入本身",
+        "error_tag": "WRONG_FILTER_PASSBAND"
+      },
+      {
+        "id": "C",
+        "content": "等于输入的2倍",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "随n线性增长",
+        "error_tag": "FORGOT_INTEGRATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：常数序列相邻样本相等，一阶差分为0。错项忽略相减或误作累加器。易错点：一阶差分器抑制直流。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题3.15（理想低通滤波与谐波筛选）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第3章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第3章",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题3.15",
+          "pdf_page": 184,
+          "printed_page": "161",
+          "section": "第3章 周期信号的傅里叶级数表示",
+          "item": "3.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第3章已完成快速人工内容审核：正确答案、实质性歧义、错误知识和严重重复均已检查；指定4处已修订。尚须整库最终核验后方可升级verified。"
+    }
+  }
+]

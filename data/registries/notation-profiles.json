@@ -1,0 +1,4 @@
+{
+  "version":"1.0.0",
+  "items":[{"id":"oppenheim-2e-ct-dt-v1","label":"奥本海姆第二版连续/离散时间记号","inline_delimiters":["$...$","\\(...\\)"],"display_delimiters":["$$...$$","\\[...\\]"]}]
+}

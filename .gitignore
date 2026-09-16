@@ -1,0 +1,33 @@
+node_modules/
+.pnpm-store/
+dist/
+playwright-report/
+test-results/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+tmp/
+exports/
+*.log
+
+# Private study sources and all derived private indexes
+private_sources/
+source_notes/
+*.pdf
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Isolated development fixtures and fixture-dependent internal tests
+tests/fixtures/
+tests/e2e/quiz.spec.ts
+tests/unit/backup.test.ts
+tests/unit/export.test.ts
+tests/unit/question-import.test.ts
+tests/unit/sampling.test.ts
+tests/unit/schedule.test.ts
+tests/unit/study-service.test.ts

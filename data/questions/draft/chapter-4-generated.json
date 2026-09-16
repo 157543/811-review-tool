@@ -1,0 +1,6222 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0150",
+    "revision": 1,
+    "family_id": "scut811-p1-q0150",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "CTFT存在时，频谱 \\(X(j\\omega)\\) 描述的是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "系统冲激响应本身",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "信号在连续角频率上的复幅度分布",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "信号在离散谐波上的傅里叶级数系数",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "信号的瞬时功率",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：CTFT把非周期信号分解为连续频率的复指数。错项混淆级数、功率和系统响应。易错点：非周期CTFT的频率变量连续。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0151",
+    "revision": 1,
+    "family_id": "scut811-p1-q0151",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "绝对可积条件 \\(\\int|x(t)|dt<\\infty\\) 对CTFT意味着什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "它说明信号一定周期",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      },
+      {
+        "id": "B",
+        "content": "它只适用于离散时间序列",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "它是CTFT存在的一个充分条件",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "它是CTFT存在的必要且充分条件",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：绝对可积保证普通意义下的CTFT存在，但不是唯一情形。错项把充分条件说成充要条件或混淆信号类型。易错点：冲激、常数等还可用广义函数表示。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0152",
+    "revision": 1,
+    "family_id": "scut811-p1-q0152",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "连续时间傅里叶变换分析公式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j\\omega)=\\int x(t)e^{j\\omega t}dt\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(X(j\\omega)=\\frac1{2\\pi}\\int x(t)e^{-j\\omega t}dt\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "C",
+        "content": "\\(X(e^{j\\omega})=\\sum_nx[n]e^{-j\\omega n}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "\\(X(j\\omega)=\\int_{-\\infty}^{\\infty}x(t)e^{-j\\omega t}dt\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：CTFT分析式采用负指数核且无前置 \\(1/2\\pi\\)。错项写反符号、错放归一化或混入DTFT。易错点：\\(1/2\\pi\\) 在合成式。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0153",
+    "revision": 1,
+    "family_id": "scut811-p1-q0153",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "CTFT合成公式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(t)=\\frac1{2\\pi}\\int_{-\\infty}^{\\infty}X(j\\omega)e^{j\\omega t}d\\omega\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(x(t)=\\int X(j\\omega)e^{-j\\omega t}d\\omega\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(x(t)=\\frac1{T_0}\\sum_kX_ke^{jk\\omega_0t}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(t)=2\\pi\\int X(j\\omega)e^{j\\omega t}d\\omega\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：合成式含 \\(1/2\\pi\\) 和正指数核。错项混淆正负号、级数与归一化。易错点：分析无系数，合成带 \\(1/2\\pi\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0154",
+    "revision": 1,
+    "family_id": "scut811-p1-q0154",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)=e^{-at}u(t)\\)，\\(a>0\\)，其CTFT的零频值 \\(X(0)\\) 是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(a\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "\\(1/a\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(-1/a\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(2/a\\)",
+        "error_tag": "MISS_FACTOR_2"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：\\(X(0)=\\int_0^\\infty e^{-at}dt=1/a\\)。错项把参数取倒、写反符号或多计一侧。易错点：零频值等于信号的时域面积。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.25（频谱取值、积分、Parseval与偶部）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.25",
+          "pdf_page": 239,
+          "printed_page": "216",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0155",
+    "revision": 1,
+    "family_id": "scut811-p1-q0155",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "下列哪一个是正确CTFT变换对？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(1\\leftrightarrow1\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "B",
+        "content": "\\(u(t)\\leftrightarrow1\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\delta(t)\\leftrightarrow1\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(\\delta(t)\\leftrightarrow2\\pi\\delta(\\omega)\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：冲激的CTFT为所有频率上常数1。错项把常数信号、阶跃或频域冲激混入。易错点：\\(1\\leftrightarrow2\\pi\\delta(\\omega)\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0156",
+    "revision": 1,
+    "family_id": "scut811-p1-q0156",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "常数信号1的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\delta(\\omega)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "B",
+        "content": "\\(1\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      },
+      {
+        "id": "D",
+        "content": "\\(2\\pi\\delta(\\omega)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：常数只有直流分量，按本书约定为 \\(2\\pi\\delta(\\omega)\\)。错项漏 \\(2\\pi\\) 或漏频域冲激。易错点：与 \\(\\delta(t)\\leftrightarrow1\\) 成对记忆。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0157",
+    "revision": 1,
+    "family_id": "scut811-p1-q0157",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "矩形脉冲 \\(x(t)=1,|t|<T\\) 的CTFT为哪一项？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\sin(\\omega T)/\\omega\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\sin(\\omega T)/\\omega\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\sin(\\omega T)/T\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "\\(2\\cos(\\omega T)/\\omega\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：直接积分区间 \\([-T,T]\\) 得 \\(2\\sin(\\omega T)/\\omega\\)。错项漏对称区间的2或混淆变量。易错点：在 \\(\\omega=0\\) 处极限等于脉冲面积 \\(2T\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.25（频谱取值、积分、Parseval与偶部）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.25",
+          "pdf_page": 239,
+          "printed_page": "216",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0158",
+    "revision": 1,
+    "family_id": "scut811-p1-q0158",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "双边指数 \\(e^{-a|t|},a>0\\) 的CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2a/(a^2-\\omega^2)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(2a/(a^2+\\omega^2)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(1/(a+j\\omega)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "D",
+        "content": "\\(2j\\omega/(a^2+\\omega^2)\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：左右两侧指数之和给出实偶频谱 \\(2a/(a^2+\\omega^2)\\)。错项只保留右边信号或破坏偶对称。易错点：实时域偶信号的频谱应实偶。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0159",
+    "revision": 1,
+    "family_id": "scut811-p1-q0159",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(e^{at}u(-t)\\)，\\(a>0\\)，对应的频谱是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(1/(a+j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(-1/(a-j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(1/(a-j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(2a/(a^2+\\omega^2)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：从负无穷积分到0得到 \\(1/(a-j\\omega)\\)。错项混作右边指数、无端加负号或误作双边指数。易错点：左边支撑对应分母中的 \\(-j\\omega\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0160",
+    "revision": 1,
+    "family_id": "scut811-p1-q0160",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生在CTFT分析式前加了 \\(1/(2\\pi)\\)。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "指数核应改成实指数",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "积分应改成求和",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "所有CTFT都应再乘时间t",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "把合成公式的归一化系数放到了分析公式",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：本项目约定分析式无系数、合成式含 \\(1/2\\pi\\)。错项改变了变换类别或无端使用性质。易错点：先固定变换约定再套性质。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0161",
+    "revision": 1,
+    "family_id": "scut811-p1-q0161",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "有人说“只有绝对可积信号才有傅里叶变换”。该说法哪里不严谨？",
+    "options": [
+      {
+        "id": "A",
+        "content": "绝对可积只是充分条件，某些信号可在广义函数意义下有变换",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "绝对可积只适用于周期信号",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      },
+      {
+        "id": "C",
+        "content": "傅里叶变换无需任何收敛解释",
+        "error_tag": "IGNORED_CONVERGENCE_CONDITION"
+      },
+      {
+        "id": "D",
+        "content": "只有离散序列才有傅里叶变换",
+        "error_tag": "CONFUSE_CT_DT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：常数、冲激和正弦等需广义函数解释。错项否定收敛条件或混淆CT/DT。易错点：区分普通函数积分与广义变换。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0162",
+    "revision": 1,
+    "family_id": "scut811-p1-q0162",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "由 \\(\\delta(t)\\leftrightarrow1\\)，学生推出 \\(1\\leftrightarrow\\delta(\\omega)\\)。漏了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "复共轭",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "频域冲激前的 \\(2\\pi\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "时间反转",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "D",
+        "content": "绝对值",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：按当前CTFT约定，常数1对应 \\(2\\pi\\delta(\\omega)\\)。错项与本变换对无关。易错点：时域冲激与频域冲激的系数不对称。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.25（频谱取值、积分、Parseval与偶部）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.25",
+          "pdf_page": 239,
+          "printed_page": "216",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0163",
+    "revision": 1,
+    "family_id": "scut811-p1-q0163",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.1",
+    "blueprint_section": "4.1",
+    "knowledge_point_id": "kp-4.1",
+    "knowledge_point": "非周期信号与CTFT",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "矩形脉冲宽度为 \\(2T\\)，学生认为频谱在 \\(\\omega=0\\) 的值是1。最直接的检查是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频谱零频值等于信号能量",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      },
+      {
+        "id": "B",
+        "content": "只需检查频谱是否为奇函数",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "C",
+        "content": "零频值应等于时域面积 \\(2T\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "零频值总是 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：\\(X(0)=\\int x(t)dt\\)，等于脉冲面积。错项混淆归一化、能量和对称性。易错点：面积检查能快速发现尺度系数错误。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0164",
+    "revision": 1,
+    "family_id": "scut811-p1-q0164",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期连续时间信号的CTFT在频域通常表现为什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "连续平滑频谱",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "只在零频有一个冲激",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "以 \\(2\\pi\\) 为周期的普通函数",
+        "error_tag": "WRONG_PERIOD"
+      },
+      {
+        "id": "D",
+        "content": "位于各谐波频率处的冲激线谱",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：周期信号由离散谐波组成，CTFT是加权冲激列。错项混淆非周期CTFT和DTFT周期性。易错点：频率连续，但非零谱只在离散谐波点。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0165",
+    "revision": 1,
+    "family_id": "scut811-p1-q0165",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若周期信号CTFS系数为 \\(a_k\\)，其CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\pi\\sum_{k=-\\infty}^{\\infty}a_k\\delta(\\omega-k\\omega_0)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\sum_ka_k\\delta(\\omega-k\\omega_0)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi\\sum_ka_k\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\sum_ka_ke^{-jk\\omega}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：每个复指数谐波产生位于 \\(k\\omega_0\\) 的 \\(2\\pi a_k\\) 冲激。错项漏系数、漏k或混入DTFS。易错点：冲激位置必须随k变化。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0166",
+    "revision": 1,
+    "family_id": "scut811-p1-q0166",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(x(t)=\\cos(\\omega_0t)\\) 的CTFT是哪一项？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(j\\pi[\\delta(\\omega-\\omega_0)-\\delta(\\omega+\\omega_0)]\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\pi\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：余弦含两个系数均为1/2的复指数，乘 \\(2\\pi\\) 后各为 \\(\\pi\\)。错项漏负频率或混作正弦。易错点：实余弦必须有共轭对称双边谱线。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0167",
+    "revision": 1,
+    "family_id": "scut811-p1-q0167",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(e^{j\\omega_0t}\\) 的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\pi\\delta(\\omega+\\omega_0)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(2\\pi\\delta(\\omega_0-t)\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：单个正频率复指数对应 \\(\\omega_0\\) 处权重 \\(2\\pi\\) 的冲激。错项漏系数、写反位置或混淆变量。易错点：指数符号决定冲激所在的正负频率。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0168",
+    "revision": 1,
+    "family_id": "scut811-p1-q0168",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(\\sin(\\omega_0t)\\) 的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(j2\\pi[\\delta(\\omega+\\omega_0)-\\delta(\\omega-\\omega_0)]\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(j\\pi\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "\\(j\\pi[\\delta(\\omega+\\omega_0)-\\delta(\\omega-\\omega_0)]\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：正弦的两条谱线为纯虚且符号相反。错项混作余弦、倍数错或漏一侧。易错点：实时域奇信号对应纯虚奇频谱。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0169",
+    "revision": 1,
+    "family_id": "scut811-p1-q0169",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "周期冲激列 \\(\\sum_n\\delta(t-nT_0)\\) 的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\omega_0\\sum_k\\delta(\\omega-k\\omega_0),\\;\\omega_0=2\\pi/T_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(T_0\\sum_k\\delta(\\omega-kT_0)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi\\sum_k\\delta(\\omega-k\\omega_0)\\)",
+        "error_tag": "WRONG_COEFFICIENT_NORMALIZATION"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\sum_k\\delta(\\omega-k/T_0)\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：冲激列的CTFS系数为 \\(1/T_0\\)，乘 \\(2\\pi\\) 得谱线权重 \\(\\omega_0\\)。错项混淆周期与角频率或归一化。易错点：时域间隔 \\(T_0\\) 对应频域间隔 \\(2\\pi/T_0\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0170",
+    "revision": 1,
+    "family_id": "scut811-p1-q0170",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生把周期信号的CTFT画成连续曲线。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频谱应改成时间冲激列",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "周期信号的频谱应为谐波位置上的冲激线谱",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "周期信号只能有直流",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "D",
+        "content": "CTFT必须以 \\(2\\pi\\) 为周期",
+        "error_tag": "WRONG_PERIOD"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：CTFS的离散谐波在CTFT中表现为频域冲激。错项混淆DTFT周期性和变量。易错点：谱线的包络可连续，但频谱本身是冲激。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0171",
+    "revision": 1,
+    "family_id": "scut811-p1-q0171",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(e^{j3\\omega_0t}\\) 的谱线被放在 \\(\\omega=\\omega_0\\)。错在哪里？",
+    "options": [
+      {
+        "id": "A",
+        "content": "应在 \\(\\omega=3\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "B",
+        "content": "应覆盖全部频率",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "忽略谐波下标3，谱线应在 \\(3\\omega_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "应在 \\(-3\\omega_0\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：第k次谐波角频率是 \\(k\\omega_0\\)。错项写反符号或漏单位。易错点：不要把基频和第k次谐波混为一谈。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0172",
+    "revision": 1,
+    "family_id": "scut811-p1-q0172",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(\\cos\\omega_0t\\leftrightarrow2\\pi\\delta(\\omega-\\omega_0)\\)。主要漏了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "时间尺度绝对值",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      },
+      {
+        "id": "B",
+        "content": "卷积积分",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "频谱的 \\(2\\pi\\) 周期延拓",
+        "error_tag": "WRONG_PERIOD"
+      },
+      {
+        "id": "D",
+        "content": "负频率谱线及两条谱线各自的1/2系数",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：余弦由正负两个复指数各占1/2组成。错项与余弦谱线无关。易错点：实信号频谱必须满足共轭对称。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0173",
+    "revision": 1,
+    "family_id": "scut811-p1-q0173",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.2",
+    "blueprint_section": "4.2",
+    "knowledge_point_id": "kp-4.2",
+    "knowledge_point": "周期信号的傅里叶变换",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "由 \\(a_k\\) 写周期信号CTFT时，学生用 \\(\\delta(\\omega-kf_0)\\)。问题是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "CTFT变量是角频率时应使用 \\(k\\omega_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "冲激前必须除以k",
+        "error_tag": "WRONG_HARMONIC_INDEX"
+      },
+      {
+        "id": "C",
+        "content": "应把k改成时间t",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "所有谱线都应移到零频",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：若横轴为 \\(\\omega\\)，谱线间隔为 \\(\\omega_0=2\\pi f_0\\)。错项混淆下标和变量。易错点：先看频率轴单位再选 \\(f_0\\) 或 \\(\\omega_0\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0174",
+    "revision": 1,
+    "family_id": "scut811-p1-q0174",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "实信号 \\(x(t)\\) 的CTFT必满足哪种对称性？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j\\omega)\\) 必为实数",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "\\(X(-j\\omega)=X^*(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(X(-j\\omega)=X(j\\omega)\\) 对所有实信号都成立",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "\\(X(-j\\omega)=-X(j\\omega)\\) 对所有实信号都成立",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：实时域信号产生共轭对称频谱。错项把一般共轭对称缩成偶、奇或纯实。易错点：实偶才对应实偶频谱。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.7（从频谱判定实虚、奇偶；不是教材第4.7节）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.7",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0175",
+    "revision": 1,
+    "family_id": "scut811-p1-q0175",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "Parseval关系在CTFT中表达的核心是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "功率信号一定有有限能量",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      },
+      {
+        "id": "B",
+        "content": "频谱幅度必须处处为1",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "时域能量等于频域能量乘适当归一化因子",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "时域面积等于频域面积",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：\\(\\int|x|^2dt=(1/2\\pi)\\int|X|^2d\\omega\\)。错项混淆面积、功率和幅值。易错点：两侧都有模平方，频域有 \\(1/2\\pi\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0176",
+    "revision": 1,
+    "family_id": "scut811-p1-q0176",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow X(j\\omega)\\)，则 \\(x(t-t_0)\\) 对应什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(e^{j\\omega t_0}X(j\\omega)\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "\\(X(j(\\omega-t_0))\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "C",
+        "content": "\\(t_0X(j\\omega)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(e^{-j\\omega t_0}X(j\\omega)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：时延产生负指数线性相位。错项写反符号或把时移误作频移。易错点：右移 \\(t_0\\) 对应 \\(e^{-j\\omega t_0}\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.7（从频谱判定实虚、奇偶；不是教材第4.7节）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.7",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0177",
+    "revision": 1,
+    "family_id": "scut811-p1-q0177",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow X(j\\omega)\\)，则 \\(e^{j\\omega_0t}x(t)\\) 对应什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j(\\omega-\\omega_0))\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(X(j(\\omega+\\omega_0))\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "C",
+        "content": "\\(e^{j\\omega_0}X(j\\omega)\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "D",
+        "content": "\\(X(j\\omega)e^{-j\\omega t_0}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：乘正频率复指数使频谱右移 \\(\\omega_0\\)。错项写反频移或混入时移。易错点：把新频谱峰的位置代入检查最稳妥。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0178",
+    "revision": 1,
+    "family_id": "scut811-p1-q0178",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "时间尺度性质 \\(x(at)\\) 的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(|a|X(j\\omega/a)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\frac1{|a|}X(j\\omega/a)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(X(ja\\omega)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\frac1aX(j\\omega/a)\\)",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：变量代换给出 \\(1/|a|\\)，频率轴反向尺度为 \\(\\omega/a\\)。错项漏绝对值、尺度方向或系数取反。易错点：a为负时幅度系数仍为正。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0179",
+    "revision": 1,
+    "family_id": "scut811-p1-q0179",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "时域微分 \\(dx(t)/dt\\) 的CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j\\omega)/(j\\omega)\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(jX(j\\omega)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "\\(j\\omega X(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(-j\\omega X(j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：分部积分后得到乘子 \\(j\\omega\\)。错项写反符号、混成积分或漏频率。易错点：微分次数对应 \\((j\\omega)^n\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0180",
+    "revision": 1,
+    "family_id": "scut811-p1-q0180",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "时域乘以t的CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(-j\\frac{d}{d\\omega}X(j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(j\\omega X(j\\omega)\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "\\(tX(j\\omega)\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "\\(j\\frac{d}{d\\omega}X(j\\omega)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：对分析式关于 \\(\\omega\\) 求导可得 \\(tx(t)\\leftrightarrow jX^{\\prime}(j\\omega)\\)。错项写反符号或混淆时域微分。易错点：时域乘t对应频域求导。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.12（频域微分、对偶与标准指数变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.12",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0181",
+    "revision": 1,
+    "family_id": "scut811-p1-q0181",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "CTFT Parseval公式是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\int|x(t)|^2dt=\\frac1{2\\pi}\\int|X(j\\omega)|^2d\\omega\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\int x(t)dt=\\int X(j\\omega)d\\omega\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\int|x|^2dt=2\\pi\\int|X|^2d\\omega\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\int|x|dt=\\frac1{2\\pi}\\int|X|d\\omega\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：能量由模平方积分给出，按当前约定频域侧乘 \\(1/2\\pi\\)。错项漏平方或归一化取反。易错点：Parseval不是普通面积关系。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0182",
+    "revision": 1,
+    "family_id": "scut811-p1-q0182",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow X(j\\omega)\\)，则 \\(x^*(-t)\\) 的CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(-X^*(j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(X^*(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(X^*(-j\\omega)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "D",
+        "content": "\\(X(-j\\omega)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：时间反转先给 \\(X(-j\\omega)\\)，再共轭得到 \\(X^*(j\\omega)\\)。错项只做其中一个操作或多负号。易错点：逐步应用共轭和反转性质。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0183",
+    "revision": 1,
+    "family_id": "scut811-p1-q0183",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "已知 \\(x(t)\\leftrightarrow X(j\\omega)\\)，哪一对正确表示延时？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(t-2)\\leftrightarrow X(j(\\omega-2))\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "\\(x(2t)\\leftrightarrow e^{-j2\\omega}X(j\\omega)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "\\(x(t-2)\\leftrightarrow e^{-j2\\omega}X(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(x(t-2)\\leftrightarrow e^{j2\\omega}X(j\\omega)\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：右移2产生 \\(e^{-j2\\omega}\\)。错项写反相位或把时移当频移/尺度。易错点：时移不改变幅度谱。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.7（从频谱判定实虚、奇偶；不是教材第4.7节）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.7",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0184",
+    "revision": 1,
+    "family_id": "scut811-p1-q0184",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "已知 \\(x(t)\\leftrightarrow X(j\\omega)\\)，哪一对正确表示压缩？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(2t)\\leftrightarrow2X(j2\\omega)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "B",
+        "content": "\\(x(2t)\\leftrightarrow X(j\\omega/2)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "\\(x(2t)\\leftrightarrow-\\frac12X(j\\omega/2)\\)",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(2t)\\leftrightarrow\\frac12X(j\\omega/2)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：时间压缩2倍使频谱展宽2倍并乘1/2。错项尺度同向、漏系数或误加负号。易错点：用面积或 \\(1/|a|\\) 检查。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0185",
+    "revision": 1,
+    "family_id": "scut811-p1-q0185",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow X(j\\omega)\\)，下列哪一对正确？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(-t)\\leftrightarrow X(-j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(x(-t)\\leftrightarrow-X(j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(x(-t)\\leftrightarrow X^*(j\\omega)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(-t)\\leftrightarrow X(j/\\omega)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：时间反转对应频率反转。错项把函数负号、共轭或倒数尺度混入。易错点：只有实时域信号时 \\(X(-j\\omega)=X^*(j\\omega)\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0186",
+    "revision": 1,
+    "family_id": "scut811-p1-q0186",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)\\leftrightarrow X(j\\omega)\\)，哪一对体现对偶性？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(jt)\\leftrightarrow x(-\\omega)/(2\\pi)\\)",
+        "error_tag": "WRONG_DUALITY_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(X(jt)\\leftrightarrow2\\pi x(-\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(X(jt)\\leftrightarrow x(\\omega)\\)",
+        "error_tag": "WRONG_DUALITY_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(X(jt)\\leftrightarrow2\\pi x(\\omega)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：当前CTFT约定下对偶包含 \\(2\\pi\\) 和自变量反转。错项漏因子或反转。易错点：对偶性最容易同时漏两处。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0187",
+    "revision": 1,
+    "family_id": "scut811-p1-q0187",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(x(t-t_0)\\leftrightarrow e^{j\\omega t_0}X(j\\omega)\\)。错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "应再乘 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "B",
+        "content": "应把X改成模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "时移相位符号写反，应为负号",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "应把 \\(t_0\\) 换成 \\(1/t_0\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：右移产生 \\(e^{-j\\omega t_0}\\)。错项引入无关尺度、常数或能量。易错点：延时对应负线性相位。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.7（从频谱判定实虚、奇偶；不是教材第4.7节）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.7",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.7",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0188",
+    "revision": 1,
+    "family_id": "scut811-p1-q0188",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(x(-2t)\\leftrightarrow-\\frac12X(-j\\omega/2)\\)。主要错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频率自变量不应反转",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "B",
+        "content": "系数应为2",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "应增加 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "幅度系数应为 \\(1/|-2|=1/2\\)，不能带负号",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：尺度公式中的系数取绝对值；负号只反转频率轴。错项漏反转、取倒数错误或加入无关常数。易错点：把幅度系数与频率反转分开处理。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0189",
+    "revision": 1,
+    "family_id": "scut811-p1-q0189",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生由 \\(x(t)\\leftrightarrow X(j\\omega)\\) 推出 \\(tx(t)\\leftrightarrow j\\omega X(j\\omega)\\)。混淆了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把时域乘t误当成时域微分",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "漏了时间反转",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "C",
+        "content": "漏了模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "D",
+        "content": "把CTFT误当DTFT",
+        "error_tag": "CONFUSE_CT_DT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：乘t应对应 \\(j\\,dX/d\\omega\\)，而 \\(j\\omega X\\) 对应 \\(dx/dt\\)。错项与此性质无关。易错点：乘变量对应另一域求导。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0190",
+    "revision": 1,
+    "family_id": "scut811-p1-q0190",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对实时域信号，学生只检查了 \\(|X(-j\\omega)|=|X(j\\omega)|\\) 就断言频谱正确。还缺什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "零频值必须为零",
+        "error_tag": "WRONG_DC_COEFFICIENT"
+      },
+      {
+        "id": "B",
+        "content": "还应满足相位为奇对称，即完整的共轭对称",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "幅度必须为奇函数",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "频谱必须处处为实数",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：实时域信号要求 \\(X(-j\\omega)=X^*(j\\omega)\\)，不仅是幅度偶。错项提出过强或错误条件。易错点：共轭对称同时约束幅度与相位。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0191",
+    "revision": 1,
+    "family_id": "scut811-p1-q0191",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生把Parseval写成 \\(\\int|x|^2dt=\\int|X|^2d\\omega\\)。漏了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "两侧都不应取模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "B",
+        "content": "频域还应乘时间t",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "频域积分前的 \\(1/(2\\pi)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "时域积分前的 \\(2\\pi\\)",
+        "error_tag": "WRONG_PARSEVAL_FACTOR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：当前变换约定使频域能量需乘 \\(1/2\\pi\\)。错项系数位置或能量定义错误。易错点：Parseval因子随变换约定变化。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.12（频域微分、对偶与标准指数变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.12",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0192",
+    "revision": 1,
+    "family_id": "scut811-p1-q0192",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "频移 \\(e^{j\\omega_0t}x(t)\\) 被写成 \\(X(j(\\omega+\\omega_0))\\)。符号如何改？",
+    "options": [
+      {
+        "id": "A",
+        "content": "应为 \\(e^{-j\\omega t_0}X(j\\omega)\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "应为 \\(X(j\\omega)/\\omega_0\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "应为 \\(X(j\\omega_0)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "应为 \\(X(j(\\omega-\\omega_0))\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：乘 \\(e^{+j\\omega_0t}\\) 把原频谱中心右移到 \\(\\omega_0\\)。错项混入时移或取样。易错点：用原点谱峰移动方向检查符号。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0193",
+    "revision": 1,
+    "family_id": "scut811-p1-q0193",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对偶性写成 \\(X(jt)\\leftrightarrow x(\\omega)\\) 时漏了哪两处？",
+    "options": [
+      {
+        "id": "A",
+        "content": "漏 \\(2\\pi\\) 且漏自变量反转",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "漏绝对值且漏共轭",
+        "error_tag": "MISSING_ABSOLUTE_VALUE"
+      },
+      {
+        "id": "C",
+        "content": "漏卷积且漏积分",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "D",
+        "content": "漏周期延拓且漏模N",
+        "error_tag": "WRONG_MOD_N"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：CTFT对偶为 \\(X(jt)\\leftrightarrow2\\pi x(-\\omega)\\)。错项列出无关操作。易错点：因子和反转必须一起核对。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.15（由频谱实部与时域支撑恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.15",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.15",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0194",
+    "revision": 1,
+    "family_id": "scut811-p1-q0194",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生认为时间压缩后频谱也压缩。为什么错？",
+    "options": [
+      {
+        "id": "A",
+        "content": "只有周期信号才会展宽",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "B",
+        "content": "时间与频率尺度互为倒数，时间压缩会使频谱展宽",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "时间压缩只改变相位",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "D",
+        "content": "频谱应保持完全不变",
+        "error_tag": "INVALID_TIME_SCALING_FOR_LTI"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：\\(x(at)\\) 使用 \\(X(j\\omega/a)\\)，所以 \\(|a|>1\\) 时频谱展宽。错项忽略尺度互逆。易错点：括号内除以a代表横轴展宽a倍。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.24（从波形判断频谱实虚、相位、积分与周期性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.24",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.24",
+          "pdf_page": 239,
+          "printed_page": "216",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.24",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0195",
+    "revision": 1,
+    "family_id": "scut811-p1-q0195",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.3",
+    "blueprint_section": "4.3",
+    "knowledge_point_id": "kp-4.3",
+    "knowledge_point": "CTFT性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生从 \\(x(t)\\) 为实信号推出 \\(X(j\\omega)\\) 必为实偶函数。何时这一结论才成立？",
+    "options": [
+      {
+        "id": "A",
+        "content": "还需 \\(x(t)\\) 为周期信号",
+        "error_tag": "WRONG_PERIOD"
+      },
+      {
+        "id": "B",
+        "content": "还需 \\(x(t)\\) 为功率信号",
+        "error_tag": "CONFUSE_ENERGY_POWER"
+      },
+      {
+        "id": "C",
+        "content": "还需 \\(x(t)\\) 为偶函数",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "还需 \\(x(t)\\) 为因果信号",
+        "error_tag": "CAUSALITY_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：实性只保证共轭对称；再加偶性才使频谱实偶。错项给出的性质不推出实偶频谱。易错点：不要把“实”与“实偶”混为一谈。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.25（频谱取值、积分、Parseval与偶部）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.25",
+          "pdf_page": 239,
+          "printed_page": "216",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.25",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0196",
+    "revision": 1,
+    "family_id": "scut811-p1-q0196",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "时域卷积在频域对应什么运算？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频谱卷积并乘 \\(1/2\\pi\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "频谱相加",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "频谱取模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "D",
+        "content": "频谱直接相乘",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：\\(x*h\\leftrightarrow XH\\)。错项混淆相乘性质、线性叠加和能量。易错点：时域卷积对应频域相乘。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.11（卷积与时间尺度变换）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.11",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0197",
+    "revision": 1,
+    "family_id": "scut811-p1-q0197",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(y(t)=x(t)*h(t)\\)，则 \\(Y(j\\omega)\\) 等于什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j\\omega)H(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(\\frac1{2\\pi}X*H\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "\\(X+H\\)",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(X/H\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：卷积定理把时域卷积化为频域乘积。错项混入相乘定理、叠加或除法。易错点：系统频率响应由 \\(Y/X\\) 得到。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.11（卷积与时间尺度变换）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.11",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0198",
+    "revision": 1,
+    "family_id": "scut811-p1-q0198",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "频域卷积 \\(X(j\\omega)*H(j\\omega)\\) 对应的时域信号是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(t)h(t)/(2\\pi)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "B",
+        "content": "\\(2\\pi x(t)h(t)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(x(t)h(t)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(t)*h(t)\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：\\(x h\\leftrightarrow(1/2\\pi)(X*H)\\)，故 \\(X*H\\leftrightarrow2\\pi xh\\)。错项漏或倒置 \\(2\\pi\\)，或混淆卷积。易错点：频域卷积的归一化必须按变换约定处理。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.18（由频率响应求冲激响应，使用标准对与性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.18",
+          "pdf_page": 238,
+          "printed_page": "215",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0199",
+    "revision": 1,
+    "family_id": "scut811-p1-q0199",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "已知 \\(x_1\\leftrightarrow X_1\\)、\\(x_2\\leftrightarrow X_2\\)，哪一对正确？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x_1x_2\\leftrightarrow X_1X_2\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "\\(x_1*x_2\\leftrightarrow(X_1+X_2)/2\\)",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(x_1*x_2\\leftrightarrow X_1X_2\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(x_1*x_2\\leftrightarrow X_1*X_2\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：时域卷积对应频域点乘。错项把两个域都写成卷积/相乘或误用线性平均。易错点：星号跨域后变成普通乘号。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.11（卷积与时间尺度变换）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.11",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0200",
+    "revision": 1,
+    "family_id": "scut811-p1-q0200",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)*\\delta(t-t_0)\\) 的CTFT为哪一项？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(e^{j\\omega t_0}X(j\\omega)\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "\\(X(j(\\omega-t_0))\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "C",
+        "content": "\\(2\\pi X(j\\omega)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "\\(e^{-j\\omega t_0}X(j\\omega)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：与移位冲激卷积得到 \\(x(t-t_0)\\)，再用时移性质。错项写反相位或混淆频移。易错点：冲激卷积执行的是时移。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.18（由频率响应求冲激响应，使用标准对与性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.18",
+          "pdf_page": 238,
+          "printed_page": "215",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0201",
+    "revision": 1,
+    "family_id": "scut811-p1-q0201",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(x*h\\leftrightarrow X*H\\)。错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "时域卷积应对应频域普通乘积 \\(XH\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "应对应频域相加",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "应对应 \\(X/H\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "D",
+        "content": "应对应 \\(|XH|^2\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：卷积定理将卷积变为乘法。错项引入加法、除法或能量。易错点：看清星号所在的域。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.11（卷积与时间尺度变换）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.11",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0202",
+    "revision": 1,
+    "family_id": "scut811-p1-q0202",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生由 \\(Y=XH\\) 求 \\(H=XY\\)。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "H只能在零频定义",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "B",
+        "content": "频率响应应取输出频谱除以输入频谱",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "应对X和Y做卷积",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "D",
+        "content": "H必须等于 \\(|Y|^2\\)",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：在 \\(X\\neq0\\) 处 \\(H=Y/X\\)。错项把代数移项、能量或定义域弄错。易错点：LTI输入输出关系是乘法关系。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.18（由频率响应求冲激响应，使用标准对与性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.18",
+          "pdf_page": 238,
+          "printed_page": "215",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0203",
+    "revision": 1,
+    "family_id": "scut811-p1-q0203",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若两个时限矩形卷积，学生把输出支撑区间写成两个区间的交集。应如何判断？",
+    "options": [
+      {
+        "id": "A",
+        "content": "卷积支撑等于第一个区间",
+        "error_tag": "WRONG_SUPPORT_INTERVAL"
+      },
+      {
+        "id": "B",
+        "content": "卷积支撑由频谱交集决定",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "卷积支撑通常是两个支撑区间端点之和形成的区间",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "卷积支撑总为空集",
+        "error_tag": "WRONG_SUPPORT_INTERVAL"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：卷积非零条件由平移后重叠决定，支撑是Minkowski和。错项误用交集或忽略第二信号。易错点：端点分别相加可快速确定范围。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.32（理想低通、周期及非周期输入的频域响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.32",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.32",
+          "pdf_page": 241,
+          "printed_page": "218",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.32",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0204",
+    "revision": 1,
+    "family_id": "scut811-p1-q0204",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.4",
+    "blueprint_section": "4.4",
+    "knowledge_point_id": "kp-4.4",
+    "knowledge_point": "卷积性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "利用卷积定理求输出时，学生把 \\(h(t-\\tau)\\) 写成 \\(h(\\tau-t)\\)。发生了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "只改变了积分变量名",
+        "error_tag": "WRONG_CONVOLUTION_INDEX"
+      },
+      {
+        "id": "B",
+        "content": "同时平移了两个信号",
+        "error_tag": "BOTH_SIGNALS_SHIFTED"
+      },
+      {
+        "id": "C",
+        "content": "漏了 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "额外引入了时间反转，卷积核方向被改错",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：\\(h(t-\\tau)\\) 与 \\(h(\\tau-t)\\) 一般不同，后者多一次反转。错项低估变化或混入其他错误。易错点：先对 \\(h(\\tau)\\) 反转成 \\(h(-\\tau)\\)，再平移。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.11（卷积与时间尺度变换）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.11",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.11",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0205",
+    "revision": 1,
+    "family_id": "scut811-p1-q0205",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "时域相乘在频域对应什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频域卷积并乘 \\(1/(2\\pi)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "频域直接相乘",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "频域相加",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "频域卷积并乘 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：\\(x_1x_2\\leftrightarrow(1/2\\pi)(X_1*X_2)\\)。错项混淆卷积定理或归一化方向。易错点：时域相乘常用于调制和加窗。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.16（冲激列与时域相乘、周期频谱）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.16",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0206",
+    "revision": 1,
+    "family_id": "scut811-p1-q0206",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(y(t)=x(t)g(t)\\)，则 \\(Y(j\\omega)\\) 是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X+G\\)",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\frac1{2\\pi}[X(j\\omega)*G(j\\omega)]\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(X(j\\omega)G(j\\omega)\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "D",
+        "content": "\\(2\\pi[X*G]\\)",
+        "error_tag": "MISSING_2PI"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：时域乘积对应带 \\(1/2\\pi\\) 的频域卷积。错项混成卷积定理或系数取反。易错点：括号内的星号是在频率变量上卷积。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.16（冲激列与时域相乘、周期频谱）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.16",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0207",
+    "revision": 1,
+    "family_id": "scut811-p1-q0207",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(x(t)\\cos\\omega_0t\\) 的频谱是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(X(j\\omega)\\cos\\omega_0\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "\\(2[X(j(\\omega-\\omega_0))+X(j(\\omega+\\omega_0))]\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\frac12[X(j(\\omega-\\omega_0))+X(j(\\omega+\\omega_0))]\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(X(j(\\omega-\\omega_0))\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：余弦由正负两个复指数各占1/2组成，产生双边频移副本。错项漏一侧、留在时域或系数错。易错点：实余弦调制一定产生两个频移副本。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.42（正弦相乘、滤波与谐波系数提取）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.42",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.42",
+          "pdf_page": 244,
+          "printed_page": "221",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.42",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0208",
+    "revision": 1,
+    "family_id": "scut811-p1-q0208",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "已知 \\(x\\leftrightarrow X\\)，哪一对正确描述余弦调制？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(x(t)\\cos\\omega_0t\\leftrightarrow X(j(\\omega-\\omega_0))\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "\\(x(t)\\cos\\omega_0t\\leftrightarrow X(j\\omega)\\cos\\omega_0\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "\\(x(t)\\cos\\omega_0t\\leftrightarrow2[X_-+X_+]\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(x(t)\\cos\\omega_0t\\leftrightarrow\\frac12[X(j(\\omega-\\omega_0))+X(j(\\omega+\\omega_0))]\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：欧拉展开直接给两个各为1/2的移频谱。错项漏负频率副本或倍数错误。易错点：复指数调制产生一个副本，余弦调制产生两个。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.16（冲激列与时域相乘、周期频谱）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.16",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0209",
+    "revision": 1,
+    "family_id": "scut811-p1-q0209",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(x(t)g(t)\\leftrightarrow X(j\\omega)G(j\\omega)\\)。错在哪里？",
+    "options": [
+      {
+        "id": "A",
+        "content": "时域相乘应对应频域卷积，并带 \\(1/(2\\pi)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "应对应频域相加",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "应对时域先求导",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "只需把G取共轭",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：点乘与卷积跨域互换。错项使用无关运算。易错点：频域直接相乘对应的是时域卷积。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.16（冲激列与时域相乘、周期频谱）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.16",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0210",
+    "revision": 1,
+    "family_id": "scut811-p1-q0210",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "余弦调制后学生只保留 \\(X(j(\\omega-\\omega_0))\\)。漏了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "DTFT的周期延拓",
+        "error_tag": "WRONG_PERIOD"
+      },
+      {
+        "id": "B",
+        "content": "向负频率方向移动的另一份频谱及两个1/2系数",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "时间反转后的频谱",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "D",
+        "content": "频谱模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：余弦含 \\(e^{j\\omega_0t}\\) 与 \\(e^{-j\\omega_0t}\\) 两项。错项混入无关性质。易错点：余弦不是单个复指数。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.42（正弦相乘、滤波与谐波系数提取）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.42",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.42",
+          "pdf_page": 244,
+          "printed_page": "221",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.42",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0211",
+    "revision": 1,
+    "family_id": "scut811-p1-q0211",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "用矩形窗截短信号后，学生认为频谱也只是被矩形截断。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "频谱只会整体平移",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "频谱只需取模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "时域乘窗会使原频谱与窗频谱卷积",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "时域乘窗不改变频谱",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：有限窗的sinc型频谱会与原谱卷积，引起展宽。错项忽略相乘定理。易错点：时域截断通常造成频谱泄漏。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.43（相乘加低通滤波的等效LTI描述）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.43",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.43",
+          "pdf_page": 244,
+          "printed_page": "221",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.43",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0212",
+    "revision": 1,
+    "family_id": "scut811-p1-q0212",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.5",
+    "blueprint_section": "4.5",
+    "knowledge_point_id": "kp-4.5",
+    "knowledge_point": "相乘性质",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "频域卷积公式中学生写成 \\(Y=X*G\\)，未乘任何系数。漏了什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "漏了 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "B",
+        "content": "漏了频率反转",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "C",
+        "content": "漏了绝对值平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "D",
+        "content": "漏了 \\(1/(2\\pi)\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：在当前CTFT约定下，时域乘积的频域结果带 \\(1/2\\pi\\)。错项给出相反系数或无关操作。易错点：先辨认是“时域相乘”再写因子。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.46（正交调制配合低通实现等效带通的性质应用）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.46",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.46",
+          "pdf_page": 245,
+          "printed_page": "222",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.46",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0213",
+    "revision": 1,
+    "family_id": "scut811-p1-q0213",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)=e^{-a|t|},a>0\\)，其频谱零频值是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2/a\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(1/a\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "C",
+        "content": "\\(2a\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "D",
+        "content": "\\(0\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：频谱为 \\(2a/(a^2+\\omega^2)\\)，令 \\(\\omega=0\\) 得 \\(2/a\\)。错项漏双边贡献或取倒尺度。易错点：零频值也等于时域面积。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0214",
+    "revision": 1,
+    "family_id": "scut811-p1-q0214",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "若 \\(x(t)=\\delta(t-t_0)\\)，其频谱相位是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(0\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "B",
+        "content": "\\(-\\omega t_0\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(\\omega t_0\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "D",
+        "content": "\\(-t_0/\\omega\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：频谱为 \\(e^{-j\\omega t_0}\\)，相位是 \\(-\\omega t_0\\)。错项写反或忽略线性相位。易错点：延时的幅度谱不变。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0215",
+    "revision": 1,
+    "family_id": "scut811-p1-q0215",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "formula",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "由 \\(u(t)-u(t-T)\\) 构成的宽度T矩形脉冲，其零频频谱值是多少？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2T\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "\\(2\\pi T\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "C",
+        "content": "\\(T\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(1\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：零频值等于时域积分面积T。错项忽略宽度、误按对称脉冲或多乘常数。易错点：先用面积快速核对变换对。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0216",
+    "revision": 1,
+    "family_id": "scut811-p1-q0216",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "宽度T、中心在0的单位矩形脉冲对应哪一频谱？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\mathrm{sinc}(\\omega/T)\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "B",
+        "content": "\\(T^2\\mathrm{sinc}(\\omega T)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "\\(e^{-j\\omega T}\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "D",
+        "content": "\\(T\\,\\mathrm{sinc}(\\omega T/2)\\)，其中 \\(\\mathrm{sinc}(x)=\\sin x/x\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：从 \\(-T/2\\) 到 \\(T/2\\) 积分得 \\(2\\sin(\\omega T/2)/\\omega\\)。错项尺度、幅度或时移性质错误。易错点：零频极限应为T。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0217",
+    "revision": 1,
+    "family_id": "scut811-p1-q0217",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(e^{-at}u(t),a>0\\) 的正确变换对是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(e^{-at}u(t)\\leftrightarrow1/(a+j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "\\(e^{-at}u(t)\\leftrightarrow1/(a-j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(e^{-at}u(t)\\leftrightarrow2a/(a^2+\\omega^2)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "D",
+        "content": "\\(e^{-at}u(t)\\leftrightarrow a+j\\omega\\)",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：右边指数直接积分得到 \\(1/(a+j\\omega)\\)。错项核符号、双边信号或倒数错误。易错点：用零频面积 \\(1/a\\) 检查。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0218",
+    "revision": 1,
+    "family_id": "scut811-p1-q0218",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(e^{at}u(-t),a>0\\) 的CTFT是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2a/(a^2+\\omega^2)\\)",
+        "error_tag": "MISSING_TIME_REVERSAL"
+      },
+      {
+        "id": "B",
+        "content": "\\(1/(a-j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(1/(a+j\\omega)\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "\\(-1/(a-j\\omega)\\)",
+        "error_tag": "MISS_SCALE_FACTOR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：左边指数从负无穷积分到0，得 \\(1/(a-j\\omega)\\)。错项混作右边或双边指数。易错点：左右支撑决定 \\(j\\omega\\) 的符号。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0219",
+    "revision": 1,
+    "family_id": "scut811-p1-q0219",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(\\delta(t-t_0)\\) 的CTFT是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\pi\\delta(\\omega-t_0)\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\delta(\\omega)e^{-jt_0}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "\\(e^{-j\\omega t_0}\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(e^{j\\omega t_0}\\)",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：冲激抽样使积分核在 \\(t_0\\) 处取值。错项写反符号或把时间位置当频率位置。易错点：移位冲激的幅度谱恒为1。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.12（频域微分、对偶与标准指数变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.12",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.12",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0220",
+    "revision": 1,
+    "family_id": "scut811-p1-q0220",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(\\cos\\omega_0t\\) 的正确变换对是哪一个？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\cos\\omega_0t\\leftrightarrow2\\pi\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\cos\\omega_0t\\leftrightarrow j\\pi[\\delta(\\omega+\\omega_0)-\\delta(\\omega-\\omega_0)]\\)",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\cos\\omega_0t\\leftrightarrow\\delta(\\omega-\\omega_0)\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "\\(\\cos\\omega_0t\\leftrightarrow\\pi[\\delta(\\omega-\\omega_0)+\\delta(\\omega+\\omega_0)]\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：余弦由正负两条各为1/2的复指数构成。错项漏一侧、混作正弦或漏权重。易错点：实时域偶信号对应实偶频谱。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.14（由逆变换约束及Parseval恢复信号）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.14",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.14",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0221",
+    "revision": 1,
+    "family_id": "scut811-p1-q0221",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "\\(\\sin\\omega_0t\\) 的频谱应具有什么形式？",
+    "options": [
+      {
+        "id": "A",
+        "content": "两条纯虚、符号相反的冲激谱线",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "两条实数且同号的冲激谱线",
+        "error_tag": "SIGN_ERROR"
+      },
+      {
+        "id": "C",
+        "content": "单条正频率实冲激",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "D",
+        "content": "连续实偶频谱",
+        "error_tag": "CONFUSE_CT_DT"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：实奇正弦对应纯虚奇频谱。错项混作余弦、漏负频率或误作连续谱。易错点：先用时域奇偶性检查频谱形态。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.16（冲激列与时域相乘、周期频谱）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.16",
+          "pdf_page": 237,
+          "printed_page": "214",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.16",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0222",
+    "revision": 1,
+    "family_id": "scut811-p1-q0222",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "符号函数 \\(\\operatorname{sgn}(t)\\) 的CTFT在广义意义下是哪一项？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(2\\pi\\delta(\\omega)\\)",
+        "error_tag": "CONFUSE_IMPULSE_STEP"
+      },
+      {
+        "id": "B",
+        "content": "\\(2/(j\\omega)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "\\(1/(j\\omega)\\)",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "D",
+        "content": "\\(2j\\omega\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：由 \\(d\\,\\operatorname{sgn}(t)/dt=2\\delta(t)\\) 得 \\(j\\omega X=2\\)。错项漏2、倒置微分因子或混成常数信号。易错点：此处按主值分布理解。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.18（由频率响应求冲激响应，使用标准对与性质）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.18",
+          "pdf_page": 238,
+          "printed_page": "215",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.18",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0223",
+    "revision": 1,
+    "family_id": "scut811-p1-q0223",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "下列哪一个是正确的冲激导数变换对？",
+    "options": [
+      {
+        "id": "A",
+        "content": "\\(\\delta^{\\prime}(t)\\leftrightarrow1/(j\\omega)\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "B",
+        "content": "\\(\\delta^{\\prime}(t)\\leftrightarrow\\omega^2\\)",
+        "error_tag": "WRONG_DIFFERENTIATION_FACTOR"
+      },
+      {
+        "id": "C",
+        "content": "\\(\\delta^{\\prime}(t)\\leftrightarrow j\\omega\\)",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "\\(\\delta^{\\prime}(t)\\leftrightarrow-j\\omega\\)",
+        "error_tag": "SIGN_ERROR"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：时域微分对应乘 \\(j\\omega\\)，而 \\(\\delta\\leftrightarrow1\\)。错项写反符号或混作积分/二阶微分。易错点：每微分一次多乘一个 \\(j\\omega\\)。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.32（理想低通、周期及非周期输入的频域响应）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.32",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.32",
+          "pdf_page": 241,
+          "printed_page": "218",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.32",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0224",
+    "revision": 1,
+    "family_id": "scut811-p1-q0224",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "transform_pair",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "三角脉冲可看作两个矩形脉冲卷积，因此其频谱具有哪种基本形态？",
+    "options": [
+      {
+        "id": "A",
+        "content": "矩形脉冲频谱本身",
+        "error_tag": "MISS_FACTOR_2"
+      },
+      {
+        "id": "B",
+        "content": "两个频谱的卷积",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "C",
+        "content": "纯相位线性函数",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "D",
+        "content": "矩形脉冲频谱的平方，即sinc平方形态",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：时域卷积对应频域乘积，同形矩形卷积得到频谱平方。错项漏一次因子或把域关系写反。易错点：归一化取决于三角脉冲定义，但平方形态不变。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.37（卷积周期化与FS系数、CTFT采样关系）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.37",
+          "pdf_page": 243,
+          "printed_page": "220",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.37",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0225",
+    "revision": 1,
+    "family_id": "scut811-p1-q0225",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "变换对表中把 \\(e^{-a|t|}\\) 的频谱写成 \\(1/(a+j\\omega)\\)。错在哪里？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把双边指数误写成了右边指数的频谱",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "漏了时间延迟",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "C",
+        "content": "应使用DTFT",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "D",
+        "content": "频谱应为冲激列",
+        "error_tag": "WRONG_PERIOD"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：双边指数频谱是实偶的 \\(2a/(a^2+\\omega^2)\\)。错项给出无关性质。易错点：先看时域支撑是单边还是双边。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.8（时域积分、微分与矩形脉冲变换对）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.8",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.8",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0226",
+    "revision": 1,
+    "family_id": "scut811-p1-q0226",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "学生写 \\(\\delta^{\\prime}(t)\\leftrightarrow1/(j\\omega)\\)。他把哪两个操作混淆了？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把实性误成偶性",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      },
+      {
+        "id": "B",
+        "content": "把微分误成了积分",
+        "error_tag": null
+      },
+      {
+        "id": "C",
+        "content": "把时移误成频移",
+        "error_tag": "WRONG_SHIFT_DIRECTION"
+      },
+      {
+        "id": "D",
+        "content": "把卷积误成相乘",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      }
+    ],
+    "correct_option": "B",
+    "explanation": "正确：微分对应乘 \\(j\\omega\\)，除以 \\(j\\omega\\) 与积分相关。错项与该变换对无关。易错点：导数次数越高，频域乘幂越高。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.9（常见变换对、实虚部与奇偶分解）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.9",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.9",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0227",
+    "revision": 1,
+    "family_id": "scut811-p1-q0227",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.6",
+    "blueprint_section": "4.6",
+    "knowledge_point_id": "kp-4.6",
+    "knowledge_point": "性质与基本变换对表",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "对中心在0的实偶矩形脉冲，某答案给出带非零线性相位的频谱。最可能的问题是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "漏了卷积",
+        "error_tag": "CONFUSE_CONVOLUTION_MULTIPLICATION"
+      },
+      {
+        "id": "B",
+        "content": "漏了模平方",
+        "error_tag": "FORGOT_MAGNITUDE_SQUARED"
+      },
+      {
+        "id": "C",
+        "content": "无端引入了时间平移",
+        "error_tag": null
+      },
+      {
+        "id": "D",
+        "content": "漏了复共轭",
+        "error_tag": "IGNORED_CONJUGATE_SYMMETRY"
+      }
+    ],
+    "correct_option": "C",
+    "explanation": "正确：中心在0的实偶信号应有实偶频谱，不应有延时线性相位。错项不是线性相位来源。易错点：频谱相位可反查时域中心位置。",
+    "source": {
+      "type": "KEY_EXERCISE",
+      "reference": "基于重点习题4.10（sinc组合、频域运算与Parseval）的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "SCUT811-KEY-EXERCISE-LIST-01",
+          "location_text": "第4章重点课后题列表",
+          "pdf_page": 4,
+          "printed_page": null,
+          "section": "第4章",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        },
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "习题4.10",
+          "pdf_page": 236,
+          "printed_page": "213",
+          "section": "第4章 连续时间傅里叶变换",
+          "item": "4.10",
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0228",
+    "revision": 1,
+    "family_id": "scut811-p1-q0228",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.7",
+    "blueprint_section": "4.7",
+    "knowledge_point_id": "kp-4.7",
+    "knowledge_point": "常系数微分方程系统",
+    "type": "mcq",
+    "subtype": "concept",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "零初始条件下，常系数微分方程系统的频率响应如何得到？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把所有导数直接删去",
+        "error_tag": "OUTPUT_NOT_DIFFERENTIATED"
+      },
+      {
+        "id": "B",
+        "content": "令 \\(t=0\\) 后取 \\(Y/X\\)",
+        "error_tag": "WRONG_FREQUENCY_SCALE"
+      },
+      {
+        "id": "C",
+        "content": "只对输入作CTFT",
+        "error_tag": "LINEARITY_ERROR"
+      },
+      {
+        "id": "D",
+        "content": "对方程作CTFT并取 \\(H=Y/X\\)",
+        "error_tag": null
+      }
+    ],
+    "correct_option": "D",
+    "explanation": "正确：每阶导数替换为 \\((j\\omega)^k\\)，再代数求比值。错项忽略导数或没有完整变换。易错点：输出侧和输入侧的导数都要处理。",
+    "source": {
+      "type": "TEXTBOOK_PROPERTY",
+      "reference": "基于奥本海姆第二版第4.7节 由线性常系数微分方程表征的系统的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第4.7节 由线性常系数微分方程表征的系统",
+          "pdf_page": 233,
+          "printed_page": "210",
+          "section": "第4.7节 由线性常系数微分方程表征的系统",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  },
+  {
+    "schema_version": "1.0.0",
+    "id": "scut811-p1-q0229",
+    "revision": 1,
+    "family_id": "scut811-p1-q0229",
+    "variant_role": "base",
+    "chapter": 4,
+    "section": "4.7",
+    "blueprint_section": "4.7",
+    "knowledge_point_id": "kp-4.7",
+    "knowledge_point": "常系数微分方程系统",
+    "type": "mcq",
+    "subtype": "error_discrimination",
+    "importance_811": 4,
+    "syllabus": "explicit",
+    "can_skip": false,
+    "notation_profile": "oppenheim-2e-ct-dt-v1",
+    "stem": "由 \\(y^{\\prime}(t)+2y(t)=x(t)\\)，学生得 \\(H(j\\omega)=j\\omega+2\\)。核心错误是什么？",
+    "options": [
+      {
+        "id": "A",
+        "content": "把分母多项式当成频率响应，正确应为 \\(1/(j\\omega+2)\\)",
+        "error_tag": null
+      },
+      {
+        "id": "B",
+        "content": "导数应换成 \\(e^{-j\\omega}\\)",
+        "error_tag": "CONFUSE_CT_DT"
+      },
+      {
+        "id": "C",
+        "content": "常数2应换成 \\(2\\pi\\)",
+        "error_tag": "MISSING_2PI"
+      },
+      {
+        "id": "D",
+        "content": "输出还应再求一次导数",
+        "error_tag": "OUTPUT_NOT_DIFFERENTIATED"
+      }
+    ],
+    "correct_option": "A",
+    "explanation": "正确：\\((j\\omega+2)Y=X\\)，所以 \\(H=Y/X=1/(j\\omega+2)\\)。错项混入离散性质或无关操作。易错点：变换后先把Y与X分居两侧再取比值。",
+    "source": {
+      "type": "TEXTBOOK_PROPERTY",
+      "reference": "基于奥本海姆第二版第4.7节 由线性常系数微分方程表征的系统的受控短题改写；答案与干扰项待人工复核。",
+      "parent_id": null,
+      "parent_knowledge_point": null,
+      "citations": [
+        {
+          "source_id": "OPPENHEIM-2E-LIU-01",
+          "location_text": "第4.7节 由线性常系数微分方程表征的系统",
+          "pdf_page": 233,
+          "printed_page": "210",
+          "section": "第4.7节 由线性常系数微分方程表征的系统",
+          "item": null,
+          "year": null,
+          "original_exam_code": null
+        }
+      ],
+      "verification": "needs_manual_check"
+    },
+    "review": {
+      "status": "reviewed",
+      "reviewer": "project-owner",
+      "reviewed_at": "2026-09-16T00:00:00+08:00",
+      "notes": "Phase 1第4章已完成人工内容审核并获准进入正式学习版；来源核验状态保持独立，不据此伪造verified。"
+    }
+  }
+]
