@@ -85,7 +85,7 @@ export function sampleQuestions(input:SamplingInput):SamplingResult {
     const weak=eligible.filter(question=>weakIds.has(question.knowledge_point_id)||['WEAK','LEARNING'].includes(mistakeByQuestion.get(question.id)?.status??''));
     const current=eligible.filter(question=>question.chapter===settings.current_chapter);
     const old=eligible.filter(question=>question.chapter!==settings.current_chapter);
-    pick(due,count,'due');
+    pick(due,count,'due',true);
     pick(recent,Math.min(3,count-selected.length),'recent');
     pick(weak,Math.min(2,count-selected.length),'weak');
     pick(current,Math.min(3,count-selected.length),'current');
