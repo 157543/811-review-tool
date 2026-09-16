@@ -8,7 +8,7 @@ test('production release supports chapter entry, answering, recovery and mistake
 
   for(const chapter of [1,2,3,4,5]) {
     await page.locator('.filter-panel').evaluate(element=>{(element as HTMLDetailsElement).open=true;});
-    await page.getByRole('button',{name:`第 ${chapter} 章`}).click();
+    await page.getByRole('button',{name:`第 ${chapter} 章`,exact:true}).click();
     await page.getByRole('button',{name:/按章节复习/}).click();
     if(chapter>1) await page.getByRole('button',{name:'结束旧轮并开始'}).click();
     await expect(page.locator('.question-card .meta')).toContainText(`第 ${chapter} 章`);
